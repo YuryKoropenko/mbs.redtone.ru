@@ -1,0 +1,316 @@
+@charset "UTF-8";
+/*Сброс*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, samp, small,
+strike, strong, sub, sup, tt, var, b, i,
+dl, dt, dd, ol, ul, li, fieldset, form,
+label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas,
+details, embed, figure, figcaption, footer,
+header, hgroup, nav, output, ruby, section,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+button, button:active, button:focus,
+input, input:active, input:focus {
+  outline: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/*Внешние блоки*/
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.25;
+  font-family: "RobotoRegularNew", sans-serif;
+  overflow-x: hidden;
+}
+
+.header-index {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  padding-top: 2%;
+}
+
+.header__right {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 28px;
+}
+
+.header__h-nav {
+  padding-right: 80px;
+}
+
+.header__h-favorites {
+  padding-right: 80px;
+}
+
+.page-index {
+  position: relative;
+}
+
+.page__p-buttons {
+  position: absolute;
+  top: 72%;
+  z-index: 5;
+  width: 50%;
+  left: 50%;
+}
+
+.page__p-social {
+  position: absolute;
+  right: 6%;
+  bottom: 9.5%;
+  z-index: 5;
+}
+
+/*Компоненты*/
+.btn {
+  width: 293px;
+  height: 78px;
+  line-height: 78px;
+  background-color: #fff;
+  padding: 0;
+  text-align: center;
+  color: #080303;
+  border: 1px solid #fff;
+  font-size: 18px;
+  letter-spacing: 0.4px;
+  font-family: "MullerBold";
+  text-transform: uppercase;
+  border-radius: 0;
+  display: block;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.h-logo {
+  display: inline-block;
+}
+
+.h-logo__img {
+  height: 69px;
+  width: auto;
+  display: block;
+}
+
+.h-nav {
+  font-size: 0;
+}
+
+.h-nav__item {
+  display: inline-block;
+  padding-left: 33px;
+}
+
+.h-nav__item:first-child {
+  padding-left: 0;
+}
+
+.h-nav__link {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.25px;
+  font-family: "MullerMedium";
+  display: block;
+  text-decoration: none;
+}
+
+.h-nav__link:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.h-favorites {
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+  display: block;
+  padding-left: 17px;
+  position: relative;
+}
+
+.h-favorites:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.h-favorites svg {
+  font-size: 14px;
+  color: #fff;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.h-lang {
+  font-size: 0;
+}
+
+.h-lang__item {
+  display: inline-block;
+  padding-left: 16px;
+  position: relative;
+}
+
+.h-lang__item::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: absolute;
+  left: 6px;
+  top: 5px;
+  background-color: #fff;
+}
+
+.h-lang__item:first-child {
+  padding-left: 0;
+}
+
+.h-lang__item:first-child::before {
+  display: none;
+}
+
+.h-lang__link {
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "GothamProRegular";
+}
+
+.h-lang__link:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.h-lang .active .h-lang__link {
+  font-family: "GothamProBold";
+}
+
+.p-buttons {
+  display: block;
+}
+
+.p-buttons__btn {
+  width: 27vh;
+  height: 8vh;
+  line-height: 8vh;
+  margin-right: 6vh;
+  float: left;
+}
+
+.p-buttons__btn:last-child {
+  margin-right: 0;
+}
+
+.p-social {
+  font-size: 0;
+}
+
+.p-social__item {
+  display: inline-block;
+}
+
+.p-social__link svg {
+  font-size: 18px;
+  color: #fff;
+}
+
+.index-bg {
+  position: relative;
+  height: 100vh;
+  min-height: 740px;
+  overflow: hidden;
+}
+
+.index-bg__move {
+  width: auto;
+  height: 100%;
+  display: block;
+  background-image: url(../img/index-parallax-1.jpg);
+  margin-right: -40px;
+  margin-left: -40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.index-bg__move::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url(../img/index-parallax-3.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.index-bg__img {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url(../img/index-parallax-2.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 2;
+}
+
+.index-bg__wrapper {
+  position: absolute;
+  bottom: 0;
+  top: 115px;
+  left: 25%;
+  width: 100%;
+  height: auto;
+  z-index: 3;
+}
+
+.index-bg__glitch {
+  position: absolute;
+  background-image: url(../img/index-parallax-4.png);
+  width: 100%;
+  height: 100%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Заголовок</title>
+<!--
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+-->
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+	<!-- End_Styles -->
+</head>
+<body>
+	
+	<header class="header header-index">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="header__h-logo">
+						<a href="/" class="h-logo">
+							<img src="img/logo-white.png" alt="alt" class="h-logo__img">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-10">
+					<div class="header__right">
+						<div class="header__h-nav">
+							<ul class="h-nav">
+								<li class="h-nav__item">
+									<a href="#" class="h-nav__link">
+										О мероприятии
+									</a>
+								</li>
+								<li class="h-nav__item">
+									<a href="#" class="h-nav__link">
+										Карта
+									</a>
+								</li>
+								<li class="h-nav__item">
+									<a href="#" class="h-nav__link">
+										Программа
+									</a>
+								</li>
+								<li class="h-nav__item">
+									<a href="#" class="h-nav__link">
+										Спикеры
+									</a>
+								</li>
+								<li class="h-nav__item">
+									<a href="#" class="h-nav__link">
+										Участники
+									</a>
+								</li>
+								<li class="h-nav__item">
+									<a href="#" class="h-nav__link">
+										Партнеры
+									</a>
+								</li>
+								<li class="h-nav__item">
+									<a href="#" class="h-nav__link">
+										Медиа
+									</a>
+								</li>
+								<li class="h-nav__item">
+									<a href="#" class="h-nav__link">
+										Контакты
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="header__h-favorites">
+							<a href="#" class="h-favorites">
+								<i class="fas fa-star"></i>
+								Избранное
+							</a>
+						</div>
+						<div class="header__h-lang">
+							<ul class="h-lang">
+								<li class="h-lang__item active">
+									<a href="#" class="h-lang__link">
+										Ru
+									</a>
+								</li>
+								<li class="h-lang__item">
+									<a href="#" class="h-lang__link">
+										Eng
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="page page-index">
+		<div class="index-bg">
+			<div class="index-bg__move">
+				<div class="index-bg__img"></div>
+				<div class="index-bg__wrapper">
+					<div class="index-bg__glitch"></div>
+				</div>
+			</div>
+		</div>
+		<div class="page__p-buttons">
+			<div class="p-buttons">
+				<a href="#" class="btn p-buttons__btn">
+					Купить билет
+				</a>
+				<a href="#" class="btn p-buttons__btn">
+					Стать спикером
+				</a>
+			</div>
+		</div>
+		<div class="page__p-social">
+			<ul class="p-social">
+				<li class="p-social__item">
+					<a href="#" class="p-social__link">
+						<i class="fab fa-vk"></i>
+					</a>
+				</li>
+				<li class="p-social__item">
+					<a href="#" class="p-social__link">
+						<i class="fab fa-facebook-square"></i>
+					</a>
+				</li>
+				<li class="p-social__item">
+					<a href="#" class="p-social__link">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="libs/jquery.backgroundMove.js"></script>
+	<script type="text/javascript" src="libs/glitcheffect/src/mgGlitch.min.js"></script>
+	<script type="text/javascript" src="libs/fontawesome/svg-with-js/js/fontawesome-all.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+		$('.index-bg__move').backgroundMove({
+			movementStrength: '20'
+		});
+		$('.index-bg__glitch').mgGlitch();
+		var height = $(body).height();
+		alert(height);
+	</script>
+	<!-- End_Scripts -->
+</body>
+</html>

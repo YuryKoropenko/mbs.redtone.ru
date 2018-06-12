@@ -1,0 +1,50 @@
+@import "bourbon/bourbon"
+@import "sass/_custom"
+
+/*Внешние блоки*/
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.25
+	font-family: "RobotoRegularNew", sans-serif
+	overflow-x: hidden
+
+.header
+	&-index
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		z-index: 10
+		padding-top: 2%
+	&__right
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: flex-end
+		padding-top: 28px
+	&__h-logo
+	&__h-nav
+		padding-right: 80px
+	&__h-favorites
+		padding-right: 80px
+	&__h-lang
+
+.page
+	&-index
+		position: relative
+	&__p-buttons
+		position: absolute
+		top: 72%
+		z-index: 5
+		width: 50%
+		left: 50%
+	&__p-social
+		position: absolute
+		right: 6%
+		bottom: 9.5%
+		z-index: 5
