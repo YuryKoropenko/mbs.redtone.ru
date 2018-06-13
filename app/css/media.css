@@ -1,21 +1,223 @@
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-height: 740px) {
+  .p-buttons__btn {
+    height: 50px;
+    line-height: 50px;
+  }
+  /**/
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1662px) {
+  .header__h-nav,
+  .header__h-favorites {
+    padding-right: 40px;
+  }
+  /**/
+}
+
+@media only screen and (max-width: 1566px) {
+  .header__h-nav,
+  .header__h-favorites {
+    padding-right: 30px;
+  }
+  .h-lang {
+    width: 63px;
+  }
+  /**/
+}
+
+@media only screen and (max-width: 1542px) {
+  .header__h-nav {
+    margin-top: -8px;
+  }
+  .header__h-nav {
+    text-align: right;
+  }
+  .header__h-nav {
+    width: 520px;
+  }
+  /**/
+}
+
+@media only screen and (max-width: 1399px) {
+  .index-bg__wrapper {
+    left: 26%;
+  }
+  .index-bg {
+    min-height: 600px;
+  }
+  .page__p-buttons {
+    left: 47%;
+  }
+}
+
+@media only screen and (max-width: 1390px) {
+  .index-bg__img {
+    background-size: 100% auto;
+  }
+  .p-buttons__btn {
+    width: 32%;
+  }
+  .page__p-buttons {
+    top: 74%;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1199px) {
+  .p-buttons__btn {
+    font-size: 15px;
+  }
+  .page__p-buttons {
+    top: 70%;
+  }
+  /**/
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1100px) {
+  .index-bg__wrapper {
+    left: 19%;
+  }
   /**/
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991px) {
+  .header__h-nav {
+    width: auto;
+  }
+  .h-nav__button {
+    display: inline-block;
+  }
+  .h-nav__close {
+    display: block;
+  }
+  .h-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 50px;
+    z-index: 20;
+  }
+  .h-nav__item {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .h-nav__link {
+    font-size: 22px;
+  }
+  .h-nav {
+    display: none;
+  }
+  .header__h-nav {
+    margin-top: -5px;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    padding-right: 0;
+  }
+  .header__h-lang {
+    padding-right: 30px;
+  }
+  .header-index {
+    padding-top: 15px;
+  }
+  .header__right {
+    padding-top: 15px;
+  }
+  .index-bg__glitch {
+    display: none;
+  }
+  .page__p-buttons {
+    left: 0;
+    right: 0;
+    width: auto;
+    text-align: center;
+  }
+  .p-buttons {
+    display: inline-block;
+    width: 100%;
+  }
+  .p-buttons__btn {
+    width: 200px;
+    float: none;
+    display: inline-block;
+  }
+  .index-bg {
+    min-height: 480px;
+  }
   /**/
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+  .index-bg__img {
+    display: none;
+  }
+  .p-buttons__btn {
+    display: block;
+    margin: 5px auto !important;
+  }
+  .page__p-buttons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+  }
+  .page__p-social {
+    bottom: 41px;
+    right: 40px;
+  }
+  .index-bg {
+    min-height: auto;
+  }
   /**/
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 575px) {
+  .header__h-logo {
+    text-align: center;
+  }
+  .header__right {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .header__h-nav {
+    width: 33.33333%;
+    text-align: right;
+    margin-top: -3px;
+  }
+  .header__h-favorites {
+    width: 33.33333%;
+    padding-right: 0;
+  }
+  .header__h-lang {
+    width: 33.33333%;
+    text-align: center;
+    padding-right: 0;
+    margin-top: -2px;
+  }
+  .h-lang {
+    display: inline-block;
+  }
   /**/
 }
 
