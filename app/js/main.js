@@ -1,7 +1,7 @@
 $(function() {
 	
 	$('.h-nav__button').on('click', function() {
-		$('.h-nav').fadeIn();
+		$('.header__right').fadeIn();
 		$('body').css({
 			'overflow':'hidden'
 		});
@@ -9,7 +9,7 @@ $(function() {
 	});
 
 	$('.h-nav__close').on('click', function() {
-		$('.h-nav').fadeOut();
+		$('.header__right').fadeOut();
 		$('body').css({
 			'overflow':'auto'
 		});
