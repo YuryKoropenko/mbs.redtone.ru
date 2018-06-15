@@ -71,6 +71,13 @@ body {
   padding-right: 80px;
 }
 
+.black-page {
+  background-image: url(../img/black-page.png);
+  background-size: cover;
+  background-color: #000;
+  min-height: 100vh;
+}
+
 .page-index {
   position: relative;
 }
@@ -88,6 +95,15 @@ body {
   right: 6%;
   bottom: 9.5%;
   z-index: 5;
+}
+
+.page__p-title {
+  text-align: center;
+  padding-top: 4%;
+}
+
+.page__p-people {
+  padding-bottom: 90px;
 }
 
 /*Компоненты*/
@@ -145,6 +161,7 @@ body {
   font-family: "MullerMedium";
   display: block;
   text-decoration: none;
+  position: relative;
 }
 
 .h-nav__link:hover {
@@ -339,4 +356,87 @@ body {
   height: 100%;
   background-size: auto 100%;
   background-repeat: no-repeat;
+}
+
+.header-black {
+  padding-top: 2%;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.header-black .header__h-nav {
+  padding-right: 52px;
+  margin-left: -60px;
+}
+
+.header-black .header__h-favorites {
+  padding-right: 52px;
+}
+
+.header-black .header__h-lang {
+  padding-right: 52px;
+}
+
+.header-black .header__h-buy {
+  margin-top: -16px;
+}
+
+.h-buy {
+  width: 172px;
+  height: 52px;
+  line-height: 52px;
+  font-size: 14px;
+}
+
+.p-title {
+  text-transform: uppercase;
+  font-size: 48px;
+  color: #fff;
+  letter-spacing: 0.25px;
+  font-family: "MullerBold";
+}
+
+.p-people__top img {
+  display: block;
+  width: 100%;
+}
+
+.p-people__bottom {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.p-people__bottom h2 {
+  font-size: 18px;
+  color: #fff;
+  font-family: "MullerBold";
+  letter-spacing: 0.25px;
+  display: block;
+  text-align: center;
+}
+
+.p-people__bottom span {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.25px;
+  font-family: "MullerRegular";
+}
+
+.p-people__social {
+  font-size: 0;
+  padding-top: 10px;
+}
+
+.p-people__item {
+  display: inline-block;
+}
+
+.p-people__link {
+  display: block;
+  color: #fff;
+  font-size: 18px;
 }
