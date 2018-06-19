@@ -165,6 +165,23 @@
   .h-logo__img {
     height: 40px;
   }
+  .header-black .header__h-buy {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .header-black .header__h-nav {
+    margin-left: 0;
+  }
+  .h-buy {
+    margin: 0 auto;
+  }
+  .header-black .header__h-nav,
+  .header-black .header__h-favorites,
+  .header__h-lang {
+    padding-right: 0;
+  }
 }
 
 /**/
@@ -194,6 +211,13 @@
   }
   .p-buttons__btn {
     font-size: 10px;
+  }
+  .page__p-people {
+    margin-top: 12%;
+  }
+  .page__container-bottom {
+    padding-top: 60px;
+    padding-bottom: 240px;
   }
   /**/
 }
@@ -271,11 +295,50 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+  .p-people__bottom span {
+    font-size: 14px;
+  }
+  .p-people__bottom h2 {
+    font-size: 14px;
+  }
+  .p-title {
+    font-size: 24px;
+  }
+  .page__p-title {
+    padding-top: 18%;
+  }
+  .page__p-people {
+    padding-top: 10%;
+  }
+  .p-addr {
+    padding-left: 0;
+  }
+  .p-addr__item b {
+    font-size: 14px;
+  }
+  .p-addr__item p {
+    font-size: 14px;
+  }
+  .p-addr__title {
+    font-size: 20px;
+  }
+  .page__container-bottom .page__p-social {
+    display: block;
+    right: 60px;
+  }
+  .page__p-copy {
+    left: 60px;
+  }
   /**/
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 575px) {
+  /**/
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 470px) {
   /**/
 }
 
