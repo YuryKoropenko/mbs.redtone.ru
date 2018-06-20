@@ -11,19 +11,26 @@
 	<link rel="icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 -->
 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Styles -->
-	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="libs/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
-	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
-	<!-- End_Styles -->
+<!-- Styles -->
+<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="libs/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/media.css">
+<!-- End_Styles -->
 </head>
+<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
+	<defs>
+		<filter id="filter">
+			<feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1"></feTurbulence>
+			<feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp"></feDisplacementMap>
+		</filter>
+	</defs>
+</svg>
 <body>
-	
 	<header class="header header-index">
 		<div class="container-fluid">
 			<div class="row">
@@ -113,7 +120,9 @@
 	<div class="page page-index">
 		<div class="index-bg">
 			<div class="index-bg__move">
-				<div class="index-bg__img"></div>
+				<div class="index-bg__img">
+					<div class="index-bg__img-bg"></div>
+				</div>
 				<div class="index-bg__wrapper">
 					<div class="index-bg__glitch"></div>
 				</div>
@@ -121,10 +130,10 @@
 		</div>
 		<div class="page__p-buttons">
 			<div class="p-buttons">
-				<a href="#" class="btn p-buttons__btn">
+				<a href="#" class="btn p-buttons__btn btn-light btn-glitch">
 					Купить билет
 				</a>
-				<a href="#" class="btn p-buttons__btn">
+				<a href="#" class="btn p-buttons__btn btn-light btn-glitch">
 					Стать спикером
 				</a>
 			</div>
@@ -152,14 +161,38 @@
 
 	<!-- Scripts -->
 	<script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
 	<script type="text/javascript" src="libs/jquery.backgroundMove.js"></script>
+	<script type="text/javascript" src="js/btn.js"></script>
 	<script type="text/javascript" src="libs/glitcheffect/src/mgGlitch.min.js"></script>
 	<script type="text/javascript" src="libs/fontawesome/svg-with-js/js/fontawesome-all.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script>
+		var currentX = '';
+		var currentY = '';
+		var movementConstant = .015;
+		$(document).mousemove(function(e) {
+			if(currentX == '') currentX = e.pageX;
+			var xdiff = e.pageX - currentX;
+			currentX = e.pageX;
+			if(currentY == '') currentY = e.pageY;
+			var ydiff = e.pageY - currentY;
+			currentY = e.pageY; 
+			$('.index-bg__img-bg').each(function(i, el) {
+				var movement = (i + 1) * (xdiff * movementConstant);
+				var movementy = (i + 1) * (ydiff * movementConstant);
+				var newX = $(el).position().left + movement;
+				var newY = $(el).position().top + movementy;
+				$(el).css('left', newX + 'px');
+				$(el).css('top', newY + 'px');
+			});
+		});
+	</script>
+	<script>
 		$('.index-bg__move').backgroundMove({
 			movementStrength: '20'
 		});
+
 		$('.index-bg__glitch').mgGlitch();
 	</script>
 	<!-- End_Scripts -->

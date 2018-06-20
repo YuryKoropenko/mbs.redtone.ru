@@ -46,9 +46,21 @@
 		display: block
 		text-decoration: none
 		position: relative
+		line-height: 60px
+		position: relative
+		&::after
+			content: ''
+			left: 0
+			right: 0
+			bottom: 0
+			height: 3px
+			background-color: #fff
+			display: none
 		&:hover
 			text-decoration: none
 			color: #fff
+			&::after
+				display: block
 	&__button
 		display: none
 		svg
@@ -87,7 +99,6 @@
 
 .h-lang
 	font-size: 0
-	width: 63px
 	&__item
 		display: inline-block
 		padding-left: 16px
@@ -122,8 +133,17 @@
 
 .p-buttons
 	display: block
+	&::before
+		content: ''
+		display: table
+	&::after
+		content: ''
+		display: table
+		clear: both
 	&__btn
-		width: 26%
+		width: 100%
+		max-width: 28vh
+		min-width: 27%
 		height: 8vh
 		line-height: 8vh
 		margin-right: 6%
@@ -135,7 +155,11 @@
 	font-size: 0
 	&__item
 		display: inline-block
+		margin-right: 18px
+		&:last-child
+			margin-right: 0
 	&__link
+		display: block
 		svg
 			font-size: 18px
 			color: #fff
@@ -144,8 +168,19 @@
 .index-bg
 	position: relative
 	height: 100vh
-	min-height: 740px
+	min-height: 800px
 	overflow: hidden
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		background-image: url(../img/index-ser.png)
+		background-repeat: no-repeat
+		background-size: 100% 100%
 	&__move
 		width: auto
 		height: 100%
@@ -155,29 +190,34 @@
 		margin-left: -40px
 		background-size: 100% 120%
 		background-repeat: no-repeat
-		&::before
-			content: ''
+	&__img
+		display: block
+		position: absolute
+		left: 0
+		right: 0
+		top: 62px
+		bottom: 0
+		background-image: url(../img/index-fix.png)
+		background-size: 80% auto
+		background-repeat: no-repeat
+		background-position: left 30%
+		z-index: 2
+		width: 100%
+		margin: 0 auto
+		&-bg
 			position: absolute
 			z-index: 1
 			left: 0
 			right: 0
 			top: 0
 			bottom: 0
-			background-image: url(../img/index-parallax-3.png)
+			background-image: url(../img/index-elements.png)
 			background-repeat: no-repeat
-			background-size: 100% 100%
-	&__img
-		display: block
-		position: absolute
-		left: 0
-		right: 0
-		top: 0
-		bottom: 0
-		background-image: url(../img/index-parallax-2.png)
-		background-size: auto 100%
-		background-repeat: no-repeat
-		background-position: center center
-		z-index: 2
+			background-size: contain
+			background-position: bottom center
+			width: 100%
+			height: 100%
+			margin: 0 auto
 	&__wrapper
 		position: absolute
 		bottom: 0
@@ -207,6 +247,26 @@
 		padding-right: 52px
 	.header__h-buy
 		margin-top: -16px
+
+.header-white
+	padding-top: 2%
+	padding-left: 35px
+	padding-right: 35px
+	.header__h-nav
+		padding-right: 52px
+		margin-left: -80px
+	.header__h-favorites
+		padding-right: 52px
+	.header__h-lang
+		padding-right: 52px
+	.header__h-buy
+		margin-top: -16px
+	.h-buy
+		background-color: #0d0d0d
+		color: #fff
+	.h-lang__item::before
+		background-color: #0d0d0d
+
 
 .h-buy
 	width: 172px
@@ -301,3 +361,50 @@
 		padding-left: 45px
 		img
 			display: block
+
+.p-search
+	display: block
+	width: 100%
+	border: none
+	background-color: transparent
+	height: 100%
+	font-size: 16px
+	letter-spacing: 0.25px
+	font-family: "MullerRegular"
+
+.p-programmer
+	width: auto
+	height: 52px
+	position: relative
+	padding-right: 30px
+	padding-left: 15px
+	max-width: none
+	display: inline-block
+	width: 177px
+	background-color: transparent
+	border: 2px solid #121211
+	span
+		padding-left: 15px
+		white-space: normal
+		text-align: left
+		display: block
+		font-size: 11px
+		color: #121211
+		position: absolute
+		left: 15px
+		text-transform: none
+		right: 30px
+		top: 50%
+		width: auto
+		transform: translateY(-50%)
+		-webkit-transform: translateY(-50%)
+		line-height: 14px
+		font-family: "MullerMedium"
+		svg
+			font-size: 14px
+			color: #121211
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			-webkit-transform: translateY(-50%)

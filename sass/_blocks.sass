@@ -32,9 +32,11 @@ body
 	&__h-logo
 	&__h-nav
 		padding-right: 80px
+		margin-top: -20px
 	&__h-favorites
 		padding-right: 80px
 	&__h-lang
+		padding-top: 1px
 
 .black-page
 	min-height: 100vh
@@ -46,8 +48,8 @@ body
 	background-color: #000
 	&::before
 		content: ''
-		background-image: url(../img/black-page.png)
-		background-size: cover
+		background-image: url(../img/black-page.jpg)
+		background-size: 100% 100%
 		position: absolute
 		left: 0
 		right: 0
@@ -55,17 +57,41 @@ body
 		bottom: 0
 		z-index: -1
 
+.white-page
+	background-image: url(../img/white-page.jpg)
+	background-size: 100% 100%
+	min-height: 100vh
+	display: block
+	position: relative
+	background-repeat: no-repeat
+	.h-nav__link
+		color: #121211
+		&:hover
+			color: #121211
+			&::after
+				border-bottom: 3px solid #121211
+	.h-favorites,
+	.h-lang__link
+		color: #121211
+		&:hover
+			color: #121211
+	.h-favorites svg
+		color: #121211
+
+
 
 .page
 	&-black
 		position: relative
 		&-glitch
-			
+	&-white
+		position: relative
+
 	&-index
 		position: relative
 	&__p-buttons
 		position: absolute
-		top: 72%
+		top: 68%
 		z-index: 5
 		width: 50%
 		left: 50%
@@ -88,24 +114,42 @@ body
 			padding-top: 100px
 			padding-bottom: 435px
 			position: relative
+			overflow: hidden
 			.page__p-social
 				bottom: 118px
-				right: 156px
+				right: 50px
 			.p-contact__img
 				position: absolute
 				bottom: 0
 				top: auto
 				right: 0
-				padding-top: 72px
+				padding-top: 74px
 				height: 100%
-				width: 50%
+				width: 100%
+				margin-left: 5%
+				z-index: -1
 				img
 					max-height: 100%
 					max-width: 100%
 					display: block
 					position: absolute
-					bottom: 0
+					bottom: -20px
+					display: inline-block
 					right: 10%
+				&-wp
+					position: absolute
+					top: 74px
+					right: 5%
+					bottom: 0
+					left: 0
+				&-glitch
+					background-image: url(../img/atlant-black.png)
+					display: block
+					height: 100%
+					width: auto
+					background-size: auto 100%
+					background-repeat: no-repeat
+					background-position: right center
 	&__map
 		margin-top: 60px
 		img
@@ -114,8 +158,27 @@ body
 	&__p-copy
 		position: absolute
 		bottom: 118px
-		left: 156px
+		left: 0
 		font-size: 12px
 		color: #919191
 		letter-spacing: 0.25
 		font-family: "MullerRegular"
+	&__p-search
+		width: 100%
+		height: 50px
+		border-bottom: 2px solid #121211
+		border-top: 2px solid transparent
+		padding-left: 31px
+		position: relative
+		margin-top: 70px
+		svg
+			font-size: 16px
+			color: #121211
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			-webkit-transform: translateY(-50%)
+	&__p-programmer
+		text-align: right
+		margin-top: 78px
