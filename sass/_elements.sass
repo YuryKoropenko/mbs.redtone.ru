@@ -32,6 +32,8 @@
 
 .h-nav
 	font-size: 0
+	max-height: 63px
+	overflow: hidden
 	&__item
 		display: inline-block
 		padding-left: 33px
@@ -76,7 +78,22 @@
 			font-size: 24px
 			display: block
 			color: #fff
+	.active
+		.h-nav__link
+			text-decoration: none
+			color: #fff
+			&::after
+				display: block
 
+.header-white
+	.h-nav
+		.active
+			.h-nav__link
+				text-decoration: none
+				color: #121211
+				&::after
+					display: block
+					background-color: #121211
 
 .h-favorites
 	font-size: 14px
@@ -408,3 +425,263 @@
 			top: 50%
 			transform: translateY(-50%)
 			-webkit-transform: translateY(-50%)
+
+.p-filter
+	background-color: #fff
+	padding-top: 30px
+	padding-left: 35px
+	padding-right: 35px
+	padding-bottom: 35px
+	&__cat
+		padding-bottom: 30px
+	&__title
+		display: block
+		padding-left: 26px
+		position: relative
+		color: #121211
+		font-size: 16px
+		font-family: "MullerMedium"
+		letter-spacing: 0.15px
+		cursor: pointer
+		svg
+			position: absolute
+			left: 0
+			top: 0
+			transform: rotate(180deg)
+			-webkit-transform: rotate(180deg)
+			color: #121211
+	&__cat.show
+		.p-filter__title
+			svg
+				transform: rotate(0deg)
+				-webkit-transform: rotate(0deg)
+		.p-filter__list
+			display: block
+	&__list
+		padding-top: 20px
+		padding-bottom: 0
+		padding-left: 26px
+	&__item
+		display: block
+		width: 100%
+		padding-bottom: 18px
+		&:last-child
+			padding-bottom: 0
+		input
+			display: none
+		label
+			cursor: pointer
+			display: inline-block
+			position: relative
+			padding-left: 28px
+			font-size: 14px
+			color: #000
+			font-family: "MullerLight"
+			svg
+				position: absolute
+				left: 0
+				top: -1px
+				color: #b0b0b0
+				font-size: 16px
+	&__block
+		padding-top: 20px
+		padding-left: 26px
+	&__range
+	&__bottom
+		&::before
+			content: ''
+			display: table
+		&::after
+			content: ''
+			display: table
+			clear: both
+	&__button
+		width: 100%
+		height: 45px
+		border: 2px solid #121211
+		line-height: 45px
+		font-size: 11px
+		color: #121211
+		max-width: none
+		&:hover
+			color: #121211
+	&__skilet
+		display: block
+		&-wp
+			display: inline-block
+			position: absolute
+			left: -118px
+			top: -211px
+			z-index: -1
+
+
+.p-amount
+	&__left
+		width: 50%
+		float: left
+		display: block
+		text-align: left
+		background-color: transparent
+		border: none
+		font-size: 14px
+		color: #000
+		font-family: "HelveticaNeueCyr"
+		margin-top: 14px
+	&__right
+		width: 50%
+		float: right
+		display: block
+		text-align: right
+		background-color: transparent
+		border: none
+		font-size: 14px
+		color: #000
+		font-family: "HelveticaNeueCyr"
+		margin-top: 14px
+
+.p-progitem
+	background-color: #fff
+	padding: 35px
+	margin-bottom: 30px
+	position: relative
+	&__title
+		display: block
+		padding-right: 60px
+		position: relative
+		color: #000
+		line-height: 24px
+		font-family: "MullerBold"
+		font-size: 18px
+		height: 72px
+		overflow: hidden
+		margin-bottom: 16px
+	&__icons
+		position: absolute
+		right: 0
+		top: 0
+		font-size: 0
+	&__icon
+		display: inline-block
+		padding-left: 14px
+		&:first-child
+			padding-left: 0
+	&__iconlink
+		text-decoration: none
+		color: #000
+		font-size: 18px
+		svg
+			color: #000
+			font-size: 12px
+	&__description
+		color: #000
+		font-size: 12px
+		line-height: 16px
+		font-family: "MullerLight"
+		letter-spacing: 0.10px
+		width: 90%
+		display: block
+		margin-bottom: 16px
+		height: 32px
+		overflow: hidden
+	&__wrapper
+		border-top: 1px solid #707070
+		padding-top: 30px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		height: 123px
+		overflow: hidden
+	&__data
+		width: 42px
+		font-size: 11px
+		color: #000
+		letter-spacing: 3.5px
+		text-align: center
+		text-transform: uppercase
+		span
+			color: #000
+			font-size: 32px
+			letter-spacing: -0.20px
+			font-family: "GothamProRegular"
+			border-bottom: 1px solid #707070
+			display: block
+			margin-bottom: 5px
+	&__list
+		width: 100%
+		padding-left: 22px
+	&__item
+		padding-left: 21px
+		color: #000
+		font-size: 12px
+		line-height: 16px
+		margin-bottom: 14px
+		position: relative
+		&:last-child
+			margin-bottom: 0
+		a
+			text-decoration: underline
+			color: #000
+			font-size: 12px
+			&:hover
+				text-decoration: none
+				color: #000
+		svg
+			font-size: 10px
+			color: #40e0d0
+			position: absolute
+			left: 0
+			top: 2.9px
+	&__row
+		padding-top: 25px
+		&::before
+			content: ''
+			display: table
+		&::after
+			content: ''
+			display: table
+			clear: both
+	&__left
+		float: left
+		width: 50%
+		font-size: 16px
+		color: #000
+		font-family: "MullerMedium"
+	&__right
+		float: right
+		width: 50%
+		text-transform: uppercase
+		font-size: 16px
+		color: #000
+		letter-spacing: 0.25px
+		font-family: "MullerBold"
+		text-align: right
+	&__btn
+		margin-top: 25px
+		width: 100%
+		background-color: #0d0d0d
+		border-color: #0d0d0d
+		height: 52px
+		line-height: 52px
+		color: #fff
+		font-size: 14px
+		letter-spacing: 0.4px
+		max-width: none
+		&:hover
+			background-color: #000
+	&__img
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		display: none
+		img
+			display: block
+			min-width: 100%
+			min-height: 100%
+	&:hover
+		.p-progitem__img
+			display: block

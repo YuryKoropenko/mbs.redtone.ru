@@ -33,3 +33,15 @@
   font-family: "MullerBold";
   src: url("../fonts/Muller/Fontfabric - MullerBold.otf");
 }
+
+/* font-family: "MullerLight" */
+@font-face {
+  font-family: "MullerLight";
+  src: url("../fonts/Muller/Fontfabric - MullerLight.otf");
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.eot");
+  src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.woff") format("woff"), url("../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.ttf") format("truetype");
+}
