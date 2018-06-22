@@ -31,6 +31,7 @@
 		</filter>
 	</defs>
 </svg>
+<canvas></canvas>
 <body class="white-page">
 	<header class="header header-white">
 		<div class="container-fluid">
@@ -60,7 +61,7 @@
 										Карта
 									</a>
 								</li>
-								<li class="h-nav__item active">
+								<li class="h-nav__item">
 									<a href="#" class="h-nav__link">
 										Программа
 									</a>
@@ -93,7 +94,7 @@
 							</ul>
 						</div>
 						<div class="header__h-favorites">
-							<a href="#" class="h-favorites">
+							<a href="#" class="h-favorites active">
 								<i class="fas fa-star"></i>
 								Избранное
 							</a>
@@ -129,159 +130,18 @@
 					<div class="col-md-12">
 						<div class="page__p-title">
 							<h2 class="p-title" style="color: #121211;">
-								Программа
+								Избранное
 							</h2>
 						</div>
 					</div>
 				</div>
-				<div class="row hidden-sm">
-					<div class="col-md-3"></div>
-					<div class="col-md-6">
-						<div class="page__p-search">
-							<i class="fas fa-search"></i>
-							<input type="text" class="p-search" placeholder="Поиск">
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="page__p-programmer">
-							<a href="#" class="btn p-programmer btn-dark btn-glitch">
-								<span>
-									<i class="fas fa-arrow-down"></i>
-									Скачать программу мероприятий (PDF)
-								</span>
-							</a>
-						</div>
-					</div>
-				</div>
+			</div>
+		</div>
+		<div class="page__section">
+			<div class="container">
 				<div class="row">
-					<div class="col-xl-3 col-lg-4">
-						<div class="page__p-filter">
-							<div class="p-filter__skilet-wp">
-								<img src="img/skilet.png" alt="alt" class="p-filter__skilet">
-							</div>
-							<div class="p-filter__mob">
-								<a class="p-filter__download">
-									<i class="fas fa-arrow-down"></i>
-								</a>
-								<a href="#" class="p-filter__mobbtn">
-									<i class="fas fa-angle-up"></i>
-									Фильтры
-								</a>
-								<a href="#" class="p-filter__search">
-									<i class="fas fa-search"></i>
-								</a>
-							</div>
-							<div class="page__p-search visible-sm">
-								<i class="fas fa-search"></i>
-								<input type="text" class="p-search" placeholder="Поиск">
-							</div>
-							<div class="p-filter">
-								<div class="p-filter__cat show">
-									<div class="p-filter__title">
-										<i class="fas fa-angle-up"></i>
-										День
-									</div>
-									<ul class="p-filter__list" style="display: block;">
-										<li class="p-filter__item">
-											<input type="checkbox" id="check1">
-											<label for="check1">
-												<i class="far fa-square"></i>
-												4 сентября
-											</label>
-										</li>
-										<li class="p-filter__item">
-											<input type="checkbox" id="check2">
-											<label for="check2">
-												<i class="far fa-square"></i>
-												5 сентября
-											</label>
-										</li>
-										<li class="p-filter__item">
-											<input type="checkbox" id="check3">
-											<label for="check3">
-												<i class="far fa-square"></i>
-												6 сентября
-											</label>
-										</li>
-									</ul>
-								</div>
-								<div class="p-filter__cat show">
-									<div class="p-filter__title">
-										<i class="fas fa-angle-up"></i>
-										Время
-									</div>
-									<div class="p-filter__block">
-										<div class="p-filter__range"></div>
-										<div class="p-filter__bottom">
-											<input type="text" class="p-amount__left" readonly>
-											<input type="text" class="p-amount__right" readonly>
-										</div>
-									</div>
-								</div>
-								<div class="p-filter__cat">
-									<div class="p-filter__title">
-										<i class="fas fa-angle-up"></i>
-										Тема
-									</div>
-									<ul class="p-filter__list">
-										<li class="p-filter__item">
-											<input type="checkbox" id="check1">
-											<label for="check1">
-												<i class="far fa-square"></i>
-												4 сентября
-											</label>
-										</li>
-										<li class="p-filter__item">
-											<input type="checkbox" id="check2">
-											<label for="check2">
-												<i class="far fa-square"></i>
-												5 сентября
-											</label>
-										</li>
-										<li class="p-filter__item">
-											<input type="checkbox" id="check3">
-											<label for="check3">
-												<i class="far fa-square"></i>
-												6 сентября
-											</label>
-										</li>
-									</ul>
-								</div>
-								<div class="p-filter__cat">
-									<div class="p-filter__title">
-										<i class="fas fa-angle-up"></i>
-										Место
-									</div>
-									<ul class="p-filter__list">
-										<li class="p-filter__item">
-											<input type="checkbox" id="check1">
-											<label for="check1">
-												<i class="far fa-square"></i>
-												4 сентября
-											</label>
-										</li>
-										<li class="p-filter__item">
-											<input type="checkbox" id="check2">
-											<label for="check2">
-												<i class="far fa-square"></i>
-												5 сентября
-											</label>
-										</li>
-										<li class="p-filter__item">
-											<input type="checkbox" id="check3">
-											<label for="check3">
-												<i class="far fa-square"></i>
-												6 сентября
-											</label>
-										</li>
-									</ul>
-								</div>
-								<input type="submit" class="btn p-filter__button btn-dark btn-glitch" value="ПРИМЕНИТЬ фильтр">
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-9 col-lg-8">
-						<div class="page__p-progitem">
+					<div class="col-xl-12 col-lg-12">
+						<div class="page__p-progitem page__p-progitem-fav">
 							<div class="row">
 								<div class="col-xl-4 col-lg-6 col-md-6">
 									<div class="p-progitem">
@@ -291,14 +151,14 @@
 										<div class="p-progitem__title">
 											Консалтинг в индустрии гостеприимства: как организовать и развить...
 											<ul class="p-progitem__icons">
-												<li class="p-progitem__icon">
+												<li class="p-progitem__icon active">
 													<a href="#" class="p-progitem__iconlink">
-														<i class="far fa-bookmark"></i>
+														<i class="fas fa-bookmark"></i>
 													</a>
 												</li>
-												<li class="p-progitem__icon">
+												<li class="p-progitem__icon active">
 													<a href="#" class="p-progitem__iconlink">
-														<i class="far fa-star"></i>
+														<i class="fas fa-star"></i>
 													</a>
 												</li>
 											</ul>
@@ -483,7 +343,7 @@
 											<img src="img/hover-prog.jpg" alt="">
 										</div>
 										<div class="p-progitem__title">
-											Настройки
+											Консалтинг в индустрии гостеприимства: как организовать и развить...
 											<ul class="p-progitem__icons">
 												<li class="p-progitem__icon">
 													<a href="#" class="p-progitem__iconlink">
@@ -493,6 +353,89 @@
 												<li class="p-progitem__icon">
 													<a href="#" class="p-progitem__iconlink">
 														<i class="far fa-star"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="p-progitem__description">
+											Гастрономическая водка "Борщёвка". Guest-bartending
+										</div>
+										<div class="p-progitem__wrapper">
+											<div class="p-progitem__data">
+												<span>
+													05
+												</span>
+												сен
+											</div>
+											<ul class="p-progitem__list">
+												<li class="p-progitem__item">
+													<i class="fas fa-clock"></i>
+													Ср, 11:30 - 12:30
+												</li>
+												<li class="p-progitem__item">
+													<i class="fas fa-map-marker"></i>
+													<a href="#">
+														TASTE LAB
+													</a>
+												</li>
+												<li class="p-progitem__item">
+													<i class="fas fa-user-alt"></i>
+													<a href="#">
+														Константин Константинопольский
+													</a>
+													<br>
+													<a href="#">
+														Илья Доронин
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="p-progitem__row">
+											<div class="p-progitem__left">
+												Стоимость:
+											</div>
+											<div class="p-progitem__right">
+												Бесплатно
+											</div>
+										</div>
+										<a href="#" class="btn p-progitem__btn btn-dark btn-glitch">
+											Пойду на лекцию
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page__p-subtitle">
+							<h3 class="p-subtitle">
+								Вам также может понравиться
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-12 col-lg-12">
+						<div class="page__p-progitem page__p-progitem-more">
+							<div class="row">
+								<div class="col-xl-4 col-lg-6 col-md-6">
+									<div class="p-progitem">
+										<div class="p-progitem__img btn-glitch btn-glitch-active">
+											<img src="img/hover-prog.jpg" alt="">
+										</div>
+										<div class="p-progitem__title">
+											Консалтинг в индустрии гостеприимства: как организовать и развить...
+											<ul class="p-progitem__icons">
+												<li class="p-progitem__icon active">
+													<a href="#" class="p-progitem__iconlink">
+														<i class="fas fa-bookmark"></i>
+													</a>
+												</li>
+												<li class="p-progitem__icon active">
+													<a href="#" class="p-progitem__iconlink">
+														<i class="fas fa-star"></i>
 													</a>
 												</li>
 											</ul>
@@ -569,7 +512,7 @@
 										<div class="p-progitem__wrapper">
 											<div class="p-progitem__data">
 												<span>
-													05
+													06
 												</span>
 												сен
 											</div>
@@ -587,10 +530,6 @@
 												<li class="p-progitem__item">
 													<i class="fas fa-user-alt"></i>
 													<a href="#">
-														Константин Константинопольский
-													</a>
-													<br>
-													<a href="#">
 														Илья Доронин
 													</a>
 												</li>
@@ -601,11 +540,11 @@
 												Стоимость:
 											</div>
 											<div class="p-progitem__right">
-												Бесплатно
+												200 Р
 											</div>
 										</div>
 										<a href="#" class="btn p-progitem__btn btn-dark btn-glitch">
-											Пойду на лекцию
+											Оплатить лекцию
 										</a>
 									</div>
 								</div>
@@ -615,7 +554,7 @@
 											<img src="img/hover-prog.jpg" alt="">
 										</div>
 										<div class="p-progitem__title">
-											Консалтинг в индустрии гостеприимства: как организовать и развить...
+											Настройки
 											<ul class="p-progitem__icons">
 												<li class="p-progitem__icon">
 													<a href="#" class="p-progitem__iconlink">
@@ -630,7 +569,7 @@
 											</ul>
 										</div>
 										<div class="p-progitem__description">
-											Гастрономическая водка "Борщёвка". Guest-bartending
+											Понятие фудпейринга и как с ним дальше жить. Как находить вкусовые пары...
 										</div>
 										<div class="p-progitem__wrapper">
 											<div class="p-progitem__data">
@@ -675,201 +614,12 @@
 										</a>
 									</div>
 								</div>
-								<div class="col-xl-4 col-lg-6 col-md-6">
-									<div class="p-progitem">
-										<div class="p-progitem__img btn-glitch btn-glitch-active">
-											<img src="img/hover-prog.jpg" alt="">
-										</div>
-										<div class="p-progitem__title">
-											Консалтинг в индустрии гостеприимства: как организовать и развить...
-											<ul class="p-progitem__icons">
-												<li class="p-progitem__icon">
-													<a href="#" class="p-progitem__iconlink">
-														<i class="far fa-bookmark"></i>
-													</a>
-												</li>
-												<li class="p-progitem__icon">
-													<a href="#" class="p-progitem__iconlink">
-														<i class="far fa-star"></i>
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="p-progitem__description">
-											Гастрономическая водка "Борщёвка". Guest-bartending
-										</div>
-										<div class="p-progitem__wrapper">
-											<div class="p-progitem__data">
-												<span>
-													05
-												</span>
-												сен
-											</div>
-											<ul class="p-progitem__list">
-												<li class="p-progitem__item">
-													<i class="fas fa-clock"></i>
-													Ср, 11:30 - 12:30
-												</li>
-												<li class="p-progitem__item">
-													<i class="fas fa-map-marker"></i>
-													<a href="#">
-														TASTE LAB
-													</a>
-												</li>
-												<li class="p-progitem__item">
-													<i class="fas fa-user-alt"></i>
-													<a href="#">
-														Константин Константинопольский
-													</a>
-													<br>
-													<a href="#">
-														Илья Доронин
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="p-progitem__row">
-											<div class="p-progitem__left">
-												Стоимость:
-											</div>
-											<div class="p-progitem__right">
-												Бесплатно
-											</div>
-										</div>
-										<a href="#" class="btn p-progitem__btn btn-dark btn-glitch">
-											Пойду на лекцию
-										</a>
-									</div>
-								</div>
-								<div class="col-xl-4 col-lg-6 col-md-6">
-									<div class="p-progitem">
-										<div class="p-progitem__img btn-glitch btn-glitch-active">
-											<img src="img/hover-prog.jpg" alt="">
-										</div>
-										<div class="p-progitem__title">
-											Консалтинг в индустрии гостеприимства: как организовать и развить...
-											<ul class="p-progitem__icons">
-												<li class="p-progitem__icon">
-													<a href="#" class="p-progitem__iconlink">
-														<i class="far fa-bookmark"></i>
-													</a>
-												</li>
-												<li class="p-progitem__icon">
-													<a href="#" class="p-progitem__iconlink">
-														<i class="far fa-star"></i>
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="p-progitem__description">
-											Гастрономическая водка "Борщёвка". Guest-bartending
-										</div>
-										<div class="p-progitem__wrapper">
-											<div class="p-progitem__data">
-												<span>
-													05
-												</span>
-												сен
-											</div>
-											<ul class="p-progitem__list">
-												<li class="p-progitem__item">
-													<i class="fas fa-clock"></i>
-													Ср, 11:30 - 12:30
-												</li>
-												<li class="p-progitem__item">
-													<i class="fas fa-map-marker"></i>
-													<a href="#">
-														TASTE LAB
-													</a>
-												</li>
-												<li class="p-progitem__item">
-													<i class="fas fa-user-alt"></i>
-													<a href="#">
-														Константин Константинопольский
-													</a>
-													<br>
-													<a href="#">
-														Илья Доронин
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="p-progitem__row">
-											<div class="p-progitem__left">
-												Стоимость:
-											</div>
-											<div class="p-progitem__right">
-												Бесплатно
-											</div>
-										</div>
-										<a href="#" class="btn p-progitem__btn btn-dark btn-glitch">
-											Пойду на лекцию
-										</a>
-									</div>
-								</div>
-								<div class="col-xl-4 col-lg-6 col-md-6">
-									<div class="p-progitem">
-										<div class="p-progitem__img btn-glitch btn-glitch-active">
-											<img src="img/hover-prog.jpg" alt="">
-										</div>
-										<div class="p-progitem__title">
-											Консалтинг в индустрии гостеприимства: как организовать и развить...
-											<ul class="p-progitem__icons">
-												<li class="p-progitem__icon">
-													<a href="#" class="p-progitem__iconlink">
-														<i class="far fa-bookmark"></i>
-													</a>
-												</li>
-												<li class="p-progitem__icon">
-													<a href="#" class="p-progitem__iconlink">
-														<i class="far fa-star"></i>
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="p-progitem__description">
-											Гастрономическая водка "Борщёвка". Guest-bartending
-										</div>
-										<div class="p-progitem__wrapper">
-											<div class="p-progitem__data">
-												<span>
-													05
-												</span>
-												сен
-											</div>
-											<ul class="p-progitem__list">
-												<li class="p-progitem__item">
-													<i class="fas fa-clock"></i>
-													Ср, 11:30 - 12:30
-												</li>
-												<li class="p-progitem__item">
-													<i class="fas fa-map-marker"></i>
-													<a href="#">
-														TASTE LAB
-													</a>
-												</li>
-												<li class="p-progitem__item">
-													<i class="fas fa-user-alt"></i>
-													<a href="#">
-														Константин Константинопольский
-													</a>
-													<br>
-													<a href="#">
-														Илья Доронин
-													</a>
-												</li>
-											</ul>
-										</div>
-										<div class="p-progitem__row">
-											<div class="p-progitem__left">
-												Стоимость:
-											</div>
-											<div class="p-progitem__right">
-												Бесплатно
-											</div>
-										</div>
-										<a href="#" class="btn p-progitem__btn btn-dark btn-glitch">
-											Пойду на лекцию
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="page__p-izb">
+										<a href="#" class="p-izb btn btn-dark btn-glitch">
+											Показать еще
 										</a>
 									</div>
 								</div>

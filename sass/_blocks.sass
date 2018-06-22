@@ -35,6 +35,7 @@ body
 		margin-top: -20px
 	&__h-favorites
 		padding-right: 80px
+		margin-top: -22px
 	&__h-lang
 		padding-top: 1px
 
@@ -193,6 +194,40 @@ body
 	&__p-progitem
 		margin-left: -30px
 		width: auto
+		&-fav
+			margin-left: 0
+			padding-bottom: 16px
+			border-bottom: 2px solid #121211
+		&-more
+			margin-left: 0
+			padding-top: 57px
+			padding-bottom: 50px
+	&__p-sort
+		text-align: center
+		padding-top: 56px
+	&__p-participant
+		padding-bottom: 60px
+	&__participant
+		padding-top: 64px
+	&__p-subtitle
+		padding: 57px 0 0
+		text-align: center
+	&__p-izb
+		padding-top: 30px
+	&__p-description
+		h2
+			color: #19211e
+			text-transform: uppercase
+			font-size: 34px
+			display: block
+			letter-spacing: 0.25px
+			font-family: "MullerBold"
+			padding-bottom: 8px
+		p
+			font-size: 18px
+			color: #121211
+			letter-spacing: 0.15px
+			font-family: "MullerRegular"
 
 .footer
 	padding: 70px 0
@@ -205,3 +240,35 @@ body
 		.p-social__link
 			svg
 				color: #121211
+	&-black
+		.page__p-copy
+			color: #fff
+		.page__p-social
+			.p-social__link
+				svg
+					color: #fff
+
+.header-index .header__h-favorites
+	margin-top: -22px
+.header-white .h-favorites::after
+	background-color: #121211
+
+.p-pcard__right
+	.p-progitem
+		max-width: 336px
+		width: auto
+		background-color: transparent
+		padding: 0
+		margin-bottom: 0
+	.p-progitem__wrapper
+		border: none
+		padding-top: 0
+		height: auto
+	.p-progitem__row
+		padding-bottom: 16px
+
+.row-pcard
+	padding-top: 4%
+
+.row-p-description
+	padding-bottom: 65px
