@@ -234,7 +234,7 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.25;
-  font-family: "RobotoRegularNew", sans-serif;
+  font-family: "GothamProRegular", sans-serif;
   overflow-x: hidden;
 }
 
@@ -274,19 +274,23 @@ body {
 }
 
 .black-page {
-  min-height: 100vh;
+  position: relative;
+}
+
+.black-page__wrapper {
   display: block;
   position: relative;
   background-image: url(../img/contacts-fon.png);
   background-size: 110% auto;
   background-repeat: no-repeat;
-  background-color: #000;
+  min-height: 100vh;
 }
 
-.black-page::before {
+.black-page-bg {
   content: '';
   background-image: url(../img/black-page.jpg);
-  background-size: 100% 100%;
+  background-size: 100% auto;
+  background-position: center bottom;
   position: absolute;
   left: 0;
   right: 0;
@@ -539,6 +543,31 @@ body {
   font-family: "MullerRegular";
 }
 
+.page__p-progslider {
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+.page__partner-card {
+  padding-top: 42px;
+  padding-bottom: 50px;
+}
+
+.page__partner-card .p-participant__bottom {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 67px;
+}
+
+.page__partner-card .p-participant__btn {
+  background-color: #fff;
+  color: #020202;
+}
+
+.page__partner-card .page__p-participant {
+  padding-bottom: 0;
+}
+
 .footer {
   padding: 70px 0;
 }
@@ -563,6 +592,16 @@ body {
 
 .footer-black .page__p-social .p-social__link svg {
   color: #fff;
+}
+
+.footer__f-adab {
+  color: #121211;
+  font-size: 11px;
+  letter-spacing: 0.25px;
+  text-align: right;
+  font-family: "MullerRegular";
+  padding-top: 1px;
+  display: block;
 }
 
 .header-index .header__h-favorites {
@@ -597,6 +636,18 @@ body {
 
 .row-p-description {
   padding-bottom: 65px;
+}
+
+.p-pcard-white .p-pcard__prev {
+  color: #fff;
+}
+
+.p-pcard-white .p-pcard__prev svg {
+  color: #fff;
+}
+
+.p-pcard-white .p-pcard__prev:hover {
+  color: #fff;
 }
 
 /*Компоненты*/
@@ -1771,4 +1822,123 @@ canvas {
 .p-pcard .p-progitem__icons {
   position: static;
   text-align: right;
+}
+
+.p-pcard__description {
+  padding-top: 45px;
+}
+
+.p-pcard__description p {
+  display: block;
+  padding-bottom: 15px;
+  color: #121211;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  font-family: "MullerRegular";
+}
+
+.p-pcard__social {
+  font-size: 0;
+  padding-top: 45px;
+}
+
+.p-pcard__social li {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.p-pcard__social li:last-child {
+  padding-right: 0;
+}
+
+.p-pcard__social a {
+  color: #121211;
+  font-size: 18px;
+}
+
+.p-pcard__social a:hover {
+  text-decoration: none;
+  color: #121211;
+}
+
+.p-pcard__social svg {
+  color: #121211;
+  font-size: 18px;
+}
+
+.p-progslider {
+  position: relative;
+}
+
+.p-progslider .owl-dots {
+  display: none;
+}
+
+.p-progslider .owl-prev {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  text-indent: -9999px;
+  background-image: url(../img/slider-arrow.png) !important;
+  background-position: left center !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  left: -72px;
+  z-index: 10;
+}
+
+.p-progslider .owl-next {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  text-indent: -9999px;
+  background-image: url(../img/slider-arrow.png) !important;
+  background-position: right center !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  right: -72px;
+  z-index: 10;
+}
+
+.p-progslider .p-progitem {
+  margin-bottom: 0;
+}
+
+.p-parcard-right {
+  padding-left: 36px;
+}
+
+.p-parcard__title {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 34px;
+  letter-spacing: 0.25px;
+  font-family: "MullerBold";
+  display: block;
+  padding-bottom: 30px;
+}
+
+.p-parcard__description {
+  display: block;
+  padding-bottom: 30px;
+  font-size: 14px;
+  color: #fff;
+  font-family: "MullerRegular";
+  letter-spacing: 0.25px;
+}
+
+.p-parcard__link {
+  color: #3874ee;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  font-family: "MullerRegular";
+}
+
+.p-parcard__link:hover {
+  color: #3874ee;
+  text-decoration: underline;
 }

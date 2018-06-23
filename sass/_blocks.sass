@@ -8,7 +8,7 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.25
-	font-family: "RobotoRegularNew", sans-serif
+	font-family: "GothamProRegular", sans-serif
 	overflow-x: hidden
 
 .header
@@ -40,17 +40,19 @@ body
 		padding-top: 1px
 
 .black-page
-	min-height: 100vh
-	display: block
 	position: relative
-	background-image: url(../img/contacts-fon.png)
-	background-size: 110% auto
-	background-repeat: no-repeat
-	background-color: #000
-	&::before
+	&__wrapper
+		display: block
+		position: relative
+		background-image: url(../img/contacts-fon.png)
+		background-size: 110% auto
+		background-repeat: no-repeat
+		min-height: 100vh
+	&-bg
 		content: ''
 		background-image: url(../img/black-page.jpg)
-		background-size: 100% 100%
+		background-size: 100% auto
+		background-position: center bottom
 		position: absolute
 		left: 0
 		right: 0
@@ -228,6 +230,22 @@ body
 			color: #121211
 			letter-spacing: 0.15px
 			font-family: "MullerRegular"
+	&__p-progslider
+		padding-top: 25px
+		padding-bottom: 10px
+	&__partner-card
+		padding-top: 42px
+		padding-bottom: 50px
+		.p-participant__bottom
+			padding-left: 0
+			padding-right: 0
+			padding-top: 67px
+		.p-participant__btn
+			background-color: #fff
+			color: #020202
+		.page__p-participant
+			padding-bottom: 0
+
 
 .footer
 	padding: 70px 0
@@ -247,6 +265,14 @@ body
 			.p-social__link
 				svg
 					color: #fff
+	&__f-adab
+		color: #121211
+		font-size: 11px
+		letter-spacing: 0.25px
+		text-align: right
+		font-family: "MullerRegular"
+		padding-top: 1px
+		display: block
 
 .header-index .header__h-favorites
 	margin-top: -22px
@@ -272,3 +298,11 @@ body
 
 .row-p-description
 	padding-bottom: 65px
+
+.p-pcard-white
+	.p-pcard__prev
+		color: #fff
+		svg
+			color: #fff
+		&:hover
+			color: #fff

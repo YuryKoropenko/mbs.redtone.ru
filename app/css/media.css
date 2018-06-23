@@ -313,6 +313,17 @@
 
 /**/
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1260px) {
+  .p-progslider .owl-prev {
+    left: -42px;
+  }
+  .p-progslider .owl-next {
+    right: -42px;
+  }
+}
+
+/**/
+/* Large Devices, Wide Screens */
 @media only screen and (max-width: 1199px) {
   .p-buttons__btn {
     font-size: 15px;
@@ -331,6 +342,15 @@
   }
   .page__p-filter {
     padding-right: 0;
+  }
+  .p-pcard__title {
+    font-size: 30px;
+  }
+  .p-progslider .owl-prev {
+    left: -21px;
+  }
+  .p-progslider .owl-next {
+    right: -21px;
   }
   /**/
 }
@@ -499,6 +519,13 @@
   }
   .page__p-progitem-more {
     padding-top: 57px;
+  }
+  .p-pcard__title {
+    font-size: 26px;
+  }
+  .p-pcard__right .p-progitem {
+    max-width: none;
+    width: 100%;
   }
   /**/
 }
@@ -750,6 +777,73 @@
   canvas {
     display: none;
   }
+  .row-pcard {
+    padding-top: 30px;
+  }
+  .p-progslider .owl-prev {
+    left: -15px;
+  }
+  .p-progslider .owl-next {
+    right: -15px;
+  }
+  .footer__f-adab {
+    display: none;
+  }
+  .p-pcard__right {
+    padding-left: 0;
+    padding-top: 30px;
+  }
+  .p-pcard__left {
+    padding-top: 10px;
+  }
+  .p-pcard__right .p-progitem {
+    padding-top: 15px;
+  }
+  .p-pcard__right .p-progitem__btn {
+    margin-top: 0;
+  }
+  .row-p-description {
+    padding-bottom: 30px;
+  }
+  .page__p-description h2 {
+    font-size: 24px;
+  }
+  .page__p-description p {
+    font-size: 16px;
+  }
+  .page__p-progslider {
+    padding-top: 10px;
+  }
+  .page__partner-card .p-participant__bottom {
+    padding-top: 15px;
+  }
+  .p-parcard-right {
+    padding-left: 0;
+  }
+  .p-parcard__title {
+    padding-bottom: 15px;
+  }
+  .p-parcard__description {
+    padding-bottom: 15px;
+  }
+  .page__partner-card {
+    padding-bottom: 30px;
+  }
+  .page__partner-card {
+    padding-top: 15px;
+  }
+  .p-pcard__description {
+    padding-top: 15px;
+  }
+  .p-pcard__social {
+    padding-top: 2px;
+  }
+  .black-page-bg {
+    background-image: url(../img/mob-black-page1.png);
+  }
+  .black-page__wrapper {
+    background-image: none;
+  }
   /**/
 }
 
@@ -759,6 +853,9 @@
     width: 100%;
     margin-left: 0;
     margin-bottom: 5px;
+  }
+  .p-parcard-right {
+    padding-top: 30px;
   }
   /**/
 }

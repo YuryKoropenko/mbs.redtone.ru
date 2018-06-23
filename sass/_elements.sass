@@ -890,4 +890,89 @@ canvas
 	.p-progitem__icon
 	.p-progitem__iconlink
 		svg
+	&__description
+		padding-top: 45px
+		p
+			display: block
+			padding-bottom: 15px
+			color: #121211
+			font-size: 14px
+			letter-spacing: 0.25px
+			font-family: "MullerRegular"
+	&__social
+		font-size: 0
+		padding-top: 45px
+		li
+			display: inline-block
+			padding-right: 20px
+			&:last-child
+				padding-right: 0
+		a
+			color: #121211
+			font-size: 18px
+			&:hover
+				text-decoration: none
+				color: #121211
+		svg
+			color: #121211
+			font-size: 18px
 
+.p-progslider
+	position: relative
+	.owl-dots
+		display: none
+	.owl-prev
+		width: 42px
+		height: 42px
+		border-radius: 50%
+		text-indent: -9999px
+		background-image: url(../img/slider-arrow.png) !important
+		background-position: left center !important
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		-webkit-transform: translateY(-50%)
+		left: -72px
+		z-index: 10
+	.owl-next
+		width: 42px
+		height: 42px
+		border-radius: 50%
+		text-indent: -9999px
+		background-image: url(../img/slider-arrow.png) !important
+		background-position: right center !important
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		-webkit-transform: translateY(-50%)
+		right: -72px
+		z-index: 10
+	.p-progitem
+		margin-bottom: 0
+
+.p-parcard
+	&-right
+		padding-left: 36px
+	&__title
+		text-transform: uppercase
+		color: #fff
+		font-size: 34px
+		letter-spacing: 0.25px
+		font-family: "MullerBold"
+		display: block
+		padding-bottom: 30px
+	&__description
+		display: block
+		padding-bottom: 30px
+		font-size: 14px
+		color: #fff
+		font-family: "MullerRegular"
+		letter-spacing: 0.25px
+	&__link
+		color: #3874ee
+		font-size: 14px
+		letter-spacing: 0.25px
+		font-family: "MullerRegular"
+		&:hover
+			color: #3874ee
+			text-decoration: underline
