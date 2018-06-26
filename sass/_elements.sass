@@ -1044,16 +1044,79 @@ canvas
 			z-index: -1
 			margin-top: -1px
 	&__item
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 424px
 		&-wp
-			display: -webkit-flex
-			display: -moz-flex
-			display: -ms-flex
-			display: -o-flex
-			display: flex
-			justify-content: center
-			align-items: center
-			height: 424px
+			display: inline-block
 			img
 				display: block
 				max-width: 100%
 				max-height: 100%
+
+.p-popup
+	background-color: #000
+	max-width: 932px
+	width: 100%
+	display: none
+	padding: 40px 59px
+	&__wrapper
+	&__title
+		color: #fff
+		font-size: 28px
+		letter-spacing: 0.25px
+		font-family: "MullerBold"
+		text-transform: uppercase
+		display: block
+		text-align: left
+		padding-bottom: 30px
+	&__row
+		padding-bottom: 38px
+		&::before
+			content: ''
+			display: table
+		&::after
+			content: ''
+			display: table
+			clear: both
+	&__left
+		width: 50%
+		float: left
+		padding-right: 22px
+	&__right
+		width: 50%
+		float: right
+		padding-left: 22px
+	&__input
+		height: 53px
+		display: block
+		border: 1px solid #808080
+		border-radius: 4px
+		padding-left: 18px
+		padding-right: 18px
+		background-color: transparent
+		width: 100%
+		color: #fff
+		font-family: "MullerLight"
+	&__textarea
+		height: 112px
+		display: block
+		border: 1px solid #808080
+		border-radius: 4px
+		padding: 18px
+		background-color: transparent
+		width: 100%
+		color: #fff
+		font-family: "MullerLight"
+		resize: none
+	&__center
+		text-align: center
+		.btn
+			height: 47px
+			display: inline-block
+			line-height: 47px

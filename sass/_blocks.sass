@@ -209,6 +209,16 @@ body
 		padding-top: 56px
 	&__p-participant
 		padding-bottom: 60px
+		&-par
+			.p-people__social
+				text-align: center
+				padding-top: 0
+			.p-people__item
+				margin-right: 20px
+				&:last-child
+					margin-right: 0
+			.p-participant__title
+				font-size: 18px
 	&__participant
 		padding-top: 64px
 	&__p-subtitle
@@ -337,3 +347,22 @@ body
 			color: #fff
 		&:hover
 			color: #fff
+
+.header-scroll
+	display: none
+
+.header-fixed
+	position: fixed
+	left: 0
+	right: 0
+	top: 0
+	z-index: 20
+	background-size: 100% auto
+	background-repeat: no-repeat
+	background-position: center center
+
+.header-fixed.header-white
+	background-image: url(../img/white-page.jpg)
+
+.header-fixed.header-black
+	background-image: url(../img/black-page.jpg)

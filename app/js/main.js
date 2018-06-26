@@ -46,6 +46,21 @@ $(function() {
 		return false;
 	});
 
+	$(window).scroll(function() {
+		if ($(window).width() > 991) {
+			var scroll = $(window).scrollTop(); 
+			if(scroll >= 120) {
+				$('.header-scroll').addClass('header-fixed');
+				$('.header-scroll').show();
+			} else {
+				$('.header-scroll').removeClass('header-fixed');
+				$('.header-scroll').hide();
+			}
+		}
+	});
+
+	$('.p-popup__input-mask').mask('+7 (999)999-99-99');
+
 
 	let canvas = document.querySelector('canvas')
 	let ctx = canvas.getContext("2d")
