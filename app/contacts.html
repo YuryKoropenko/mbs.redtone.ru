@@ -474,9 +474,17 @@
 			});
 		}, function() {
 			$('.glitch').mgGlitch({
-				destroy: true
-			});
-			$('.p-contact__img-wp').removeClass('glitch');
+					destroy : true, // set 'true' to stop the plugin
+					glitch: true, // set 'false' to stop glitching
+					scale: false, // set 'false' to stop scaling
+					blend : true, // set 'false' to stop glitch blending
+					blendModeType : 'hue', // select blend mode type
+					glitch1TimeMin : 300, // set min time for glitch 1 elem
+					glitch1TimeMax : 450, // set max time for glitch 1 elem
+					glitch2TimeMin : 100, // set min time for glitch 2 elem
+					glitch2TimeMax : 200, // скорость анимации
+				});
+				$('.p-contact__img-wp').removeClass('glitch');
 		});
 		
 	</script>
