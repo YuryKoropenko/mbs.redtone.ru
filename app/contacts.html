@@ -32,12 +32,9 @@
 </svg>
 <body class="black-page">
 	<div class="black-page__wrapper">
-		<div class="black-page-bg"></div>
-		<style>
-		.black-page-bg {
-			background-size: 100% 100%;
-		}
-		</style>
+		<div class="black-page-bg">
+			<img src="img/black-page.jpg" alt="">
+		</div>
 		<header class="header header-black">
 			<div class="container-fluid">
 				<div class="row">
@@ -463,8 +460,30 @@
 	<script type="text/javascript" src="libs/fontawesome/svg-with-js/js/fontawesome-all.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script>
+		function position() {
+			var currentX = '';
+			var currentY = '';
+			var movementConstant = .015;
+			$(document).mousemove(function(e) {
+				if(currentX == '') currentX = e.pageX;
+				var xdiff = e.pageX - currentX;
+				currentX = e.pageX;
+				if(currentY == '') currentY = e.pageY;
+				var ydiff = e.pageY - currentY;
+				currentY = e.pageY; 
+				$('.black-page-bg').each(function(i, el) {
+					var movement = (i + 1) * (xdiff * movementConstant);
+					var movementy = (i + 1) * (ydiff * movementConstant);
+					var newX = $(el).position().left + movement;
+					var newY = $(el).position().top + movementy;
+					$(el).css('left', newX + 'px');
+					$(el).css('top', newY + 'px');
+				});
+			});
+		}
+		position();
 		$('.black-page__wrapper').backgroundMove({
-			movementStrength: '20'
+			movementStrength: '20',
 		});
 
 		$('.page__container-bottom').hover(function() {

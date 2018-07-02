@@ -20,11 +20,22 @@ $(function() {
 		$('.page__p-search').slideToggle();
 		return false;
 	});
-
+/*
 	$('.p-sort__link').on('click', function() {
 		$(this).parent('li').toggleClass('active');
 		$(this).parent('li').children('.p-sort__hidden').stop(true, false).slideToggle();
+		$(document).click(function(event) {
+			if ($(event.target).closest('.p-sort__hidden').length) return;
+				$('.p-sort__item').removeClass('active');
+				$('.p-sort__hidden').slideUp();
+				event.stopPropagation();
+			});
 		return false;
+	});
+*/
+	$('.p-sort__link').on('click', function() {
+		$('.p-sort__hidden').slideUp();
+		$(this).parent('li').children('.p-sort__hidden').stop(true, false).slideToggle();
 	});
 
 	var wt = $('.p-participant__top').width();

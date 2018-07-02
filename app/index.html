@@ -124,7 +124,10 @@
 				<div class="index-bg__img">
 					<div class="index-bg__img-bg"></div>
 				</div>
-				<div class="index-bg__wrapper">
+				<div class="index-bg__wrapper index-bg__wrapper-on">
+					<div class="index-bg__glitch"></div>
+				</div>
+				<div class="index-bg__wrapper index-bg__wrapper-off">
 					<div class="index-bg__glitch"></div>
 				</div>
 			</div>
@@ -224,22 +227,39 @@
 			});
 		});
 	</script>
+	<style>
+		.index-bg__wrapper-off {
+			display: none;
+		}
+	</style>
 	<script>
 		$('.index-bg__move').backgroundMove({
 			movementStrength: '20'
 		});
 
-		$('.index-bg__glitch').mgGlitch({
+		$('.index-bg__wrapper-on .index-bg__glitch').mgGlitch({
 			destroy : false, // set 'true' to stop the plugin
 			glitch: true, // set 'false' to stop glitching
-			scale: false, // set 'false' to stop scaling
+			scale: true, // set 'false' to stop scaling
 			blend : true, // set 'false' to stop glitch blending
 			blendModeType : 'hue', // select blend mode type
-			glitch1TimeMin : 300, // set min time for glitch 1 elem
-			glitch1TimeMax : 450, // set max time for glitch 1 elem
-			glitch2TimeMin : 100, // set min time for glitch 2 elem
-			glitch2TimeMax : 200, // скорость анимации
+			glitch1TimeMin : 600, // set min time for glitch 1 elem
+			glitch1TimeMax : 900, // set max time for glitch 1 elem
+			glitch2TimeMin : 10, // set min time for glitch 2 elem
+			glitch2TimeMax : 115, // скорость анимации
 		});
+
+		function rainbow() {
+			$('.index-bg__wrapper-off').show();
+			$('.index-bg__wrapper-on').hide();
+			setTimeout (function() {
+				$('.index-bg__wrapper-on').show();
+				$('.index-bg__wrapper-off').hide();
+			}, 3000);
+		}
+		setInterval(function() {
+			return rainbow();
+		}, 6000);
 	</script>
 	<!-- End_Scripts -->
 </body>
