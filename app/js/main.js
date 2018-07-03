@@ -42,11 +42,17 @@ $(function() {
 	$('.p-participant__top').height(wt);
 
 	$('.h-nav__button').on('click', function() {
-		$('.header__right').fadeIn();
-		$('body').css({
-			'overflow':'hidden'
-		});
+		$(this).addClass('active');
+		$('body').addClass('active-mobmenu');
+		$('.active-mobmenu__bg').show();
+		$('.header__right').show();
 		return false;
+	});
+	$('.active-mobmenu__bg').on('click', function() {
+		$('.h-nav__button').removeClass('active');
+		$('body').removeClass('active-mobmenu');
+		$(this).hide();
+		$('.header__right').hide();
 	});
 
 	$('.h-nav__close').on('click', function() {
