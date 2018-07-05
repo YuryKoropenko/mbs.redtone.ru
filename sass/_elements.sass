@@ -580,6 +580,7 @@
 	margin-bottom: 30px
 	position: relative
 	z-index: 1
+	overflow: hidden
 	&__title
 		display: block
 		padding-right: 60px
@@ -620,7 +621,7 @@
 		width: 90%
 		display: block
 		margin-bottom: 16px
-		height: 32px
+		height: 48px
 		overflow: hidden
 	&__wrapper
 		border-top: 1px solid #707070
@@ -752,6 +753,10 @@
 		&:hover
 			color: #d7d7d7
 			text-decoration: none
+		sup
+			color: #d7d7d7
+			font-size: 11px
+			opacity: 0.6
 	&__item.active
 		.p-sort__link
 			svg

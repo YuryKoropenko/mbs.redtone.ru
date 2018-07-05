@@ -414,7 +414,7 @@ body {
   height: 100%;
   width: 100%;
   margin-left: 5%;
-  z-index: -1;
+  z-index: 1;
 }
 
 .page__container-bottom .p-contact__img img {
@@ -1509,6 +1509,7 @@ body {
   margin-bottom: 30px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 
 .p-progitem__title {
@@ -1564,7 +1565,7 @@ body {
   width: 90%;
   display: block;
   margin-bottom: 16px;
-  height: 32px;
+  height: 48px;
   overflow: hidden;
 }
 
@@ -1747,6 +1748,12 @@ body {
 .p-sort__link:hover {
   color: #d7d7d7;
   text-decoration: none;
+}
+
+.p-sort__link sup {
+  color: #d7d7d7;
+  font-size: 11px;
+  opacity: 0.6;
 }
 
 .p-sort__item.active .p-sort__link svg {

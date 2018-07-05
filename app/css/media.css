@@ -448,6 +448,9 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 991px) {
+  canvas {
+    display: none !important;
+  }
   .page__p-buttons {
     top: 67%;
   }
@@ -881,9 +884,6 @@
   }
   .page__p-progitem-more {
     padding-bottom: 15px;
-  }
-  canvas {
-    display: none;
   }
   .row-pcard {
     padding-top: 30px;

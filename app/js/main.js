@@ -1,3 +1,6 @@
+if (screen.width < 992) {
+	$('*').removeClass('btn-glitch');
+}
 $(function() {
 	
 	$('.p-filter__item label').on('click', function() {
