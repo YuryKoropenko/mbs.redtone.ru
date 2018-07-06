@@ -1720,11 +1720,11 @@ body {
 .p-sort__item {
   display: inline-block;
   position: relative;
-  margin-left: 60px;
-}
-
-.p-sort__item:first-child {
-  margin-left: 0;
+  padding-left: 25px;
+  padding-right: 45px;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 2px solid transparent;
 }
 
 .p-sort__link {
@@ -1734,12 +1734,14 @@ body {
   letter-spacing: 0.25px;
   padding-left: 22px;
   position: relative;
+  line-height: 54px;
+  display: block;
 }
 
 .p-sort__link svg {
   position: absolute;
   left: 0;
-  top: -1px;
+  top: 19px;
   font-size: 14px;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
@@ -1756,22 +1758,49 @@ body {
   opacity: 0.6;
 }
 
-.p-sort__item.active .p-sort__link svg {
-  transform: rotate(0deg);
-  -webkit-transform: rotate(0deg);
+.p-sort__close {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: none;
+  cursor: pointer;
+}
+
+.p-sort__item.active {
+  border-left: 2px solid #6f6f6f;
+  border-right: 2px solid #6f6f6f;
+  border-top: 2px solid #6f6f6f;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.p-sort__item.active .p-sort__hidden {
+  display: block !important;
+}
+
+.p-sort__item.active .p-sort__close {
+  display: block;
 }
 
 .p-sort__hidden {
   position: absolute;
   top: 100%;
-  margin-top: 6px;
-  background-color: #fff;
-  width: 160px;
-  padding: 5px 0;
-  left: 50%;
-  margin-left: -80px;
+  background-color: rgba(0, 0, 0, 0.65);
+  width: auto;
+  padding: 0;
+  left: -2px;
+  right: -2px;
   display: none;
   z-index: 10;
+  border-left: 2px solid #6f6f6f;
+  border-right: 2px solid #6f6f6f;
+  border-bottom: 2px solid #6f6f6f;
+  padding-bottom: 10px;
 }
 
 .p-sort__subitem {
@@ -1779,9 +1808,11 @@ body {
 }
 
 .p-sort__sublink {
-  padding: 5px 15px;
+  padding: 0 12px;
+  line-height: 44px;
   display: block;
-  color: #121211;
+  text-align: center !important;
+  color: #d7d7d7;
   font-size: 16px;
   font-family: "MullerRegular";
   letter-spacing: 0.25px;
@@ -1789,8 +1820,8 @@ body {
 }
 
 .p-sort__sublink:hover {
-  color: #121211;
-  background-color: #d7d7d7;
+  color: #d7d7d7;
+  background-color: #6f6f6f;
   text-decoration: none;
 }
 
@@ -2252,8 +2283,8 @@ canvas {
 
 .black-page-bg img {
   display: block;
-  height: 100%;
-  width: 100%;
+  height: 100% !important;
+  width: 100% !important;
   position: absolute;
   bottom: 0;
   left: 0;

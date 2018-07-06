@@ -37,8 +37,18 @@ $(function() {
 	});
 */
 	$('.p-sort__link').on('click', function() {
-		$('.p-sort__hidden').slideUp();
-		$(this).parent('li').children('.p-sort__hidden').stop(true, false).slideToggle();
+		$('.p-sort__item').removeClass('active');
+		$(this).parent().toggleClass('active');
+		$(document).click(function(event) {
+			if ($(event.target).closest('.p-sort__item').length) return;
+				$('.p-sort__item').removeClass('active');
+				event.stopPropagation();
+			});
+		return false;
+	});
+	$('.p-sort__close').on('click', function() {
+		$(this).parent().removeClass('active');
+		return false;
 	});
 
 	var wt = $('.p-participant__top').width();
