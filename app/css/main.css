@@ -632,14 +632,19 @@ body {
 
 .page__p-media .p-media__img {
   position: absolute;
-  left: -324px;
-  top: -64px;
+  left: -324px !important;
+  top: -64px !important;
 }
 
 .page__p-media .p-media__img img {
   display: block;
   width: auto;
   height: auto;
+  position: absolute;
+}
+
+.page__p-map {
+  padding-top: 40px;
 }
 
 .footer {
@@ -1472,9 +1477,13 @@ body {
 .p-filter__skilet-wp {
   display: inline-block;
   position: absolute;
-  left: -118px;
-  top: -211px;
+  left: -118px !important;
+  top: -211px !important;
   z-index: -1;
+}
+
+.p-filter__skilet-wp img {
+  position: absolute;
 }
 
 .p-amount__left {
@@ -1886,7 +1895,7 @@ canvas {
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.4;
+  opacity: 0.1;
 }
 
 .p-subtitle {
@@ -2270,6 +2279,12 @@ canvas {
   height: 47px;
   display: inline-block;
   line-height: 47px;
+}
+
+.p-map__img {
+  display: block;
+  width: 1140px;
+  height: 1038.45px;
 }
 
 .black-page-bg {

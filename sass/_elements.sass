@@ -545,9 +545,11 @@
 		&-wp
 			display: inline-block
 			position: absolute
-			left: -118px
-			top: -211px
+			left: -118px !important
+			top: -211px !important
 			z-index: -1
+			img
+				position: absolute
 
 
 .p-amount
@@ -862,7 +864,7 @@ canvas
 	width: 100%
 	top: 0
 	left: 0
-	opacity: 0.4
+	opacity: 0.1
 
 .p-subtitle
 	font-size: 30px
@@ -1156,3 +1158,12 @@ canvas
 			height: 47px
 			display: inline-block
 			line-height: 47px
+
+.p-map
+	&__wp
+	&__img
+		display: block
+		width: 1140px
+		height: 1038.45px
+	&__area-1
+

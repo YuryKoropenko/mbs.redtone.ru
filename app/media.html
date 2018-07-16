@@ -33,6 +33,96 @@
 </svg>
 <body class="white-page">
 	<canvas></canvas>
+	<header class="header header-white header-scroll">
+		<div class="active-mobmenu__bg"></div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-2 col-md-6 col-sm-6 col-6">
+					<div class="header__h-logo">
+						<a href="/" class="h-logo">
+							<img src="img/logo-w.svg" alt="alt" class="h-logo__img">
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-10 col-md-6 col-sm-6 col-6 h-nav__button-right">
+					<a href="#" class="h-nav__button">
+						<span></span>
+					</a>
+					<div class="header__right">
+						<div class="header__h-nav">
+							<ul class="h-nav">
+								<li class="h-nav__item h-nav__item-first">
+									<a href="#" class="h-nav__link">
+										О мероприятии
+									</a>
+								</li>
+								<li class="h-nav__item">
+									<a href="#" class="h-nav__link">
+										Карта
+									</a>
+								</li>
+								<li class="h-nav__item active">
+									<a href="#" class="h-nav__link">
+										Программа
+									</a>
+								</li>
+								<li class="h-nav__item">
+									<a href="#" class="h-nav__link">
+										Спикеры
+									</a>
+								</li>
+								<li class="h-nav__item">
+									<a href="#" class="h-nav__link">
+										Участники
+									</a>
+								</li>
+								<li class="h-nav__item">
+									<a href="#" class="h-nav__link">
+										Партнеры
+									</a>
+								</li>
+								<li class="h-nav__item">
+									<a href="#" class="h-nav__link">
+										Медиа
+									</a>
+								</li>
+								<li class="h-nav__item">
+									<a href="#" class="h-nav__link">
+										Контакты
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="header__h-favorites">
+							<a href="#" class="h-favorites">
+								<i class="fas fa-star"></i>
+								Избранное
+							</a>
+						</div>
+						<div class="header__h-lang">
+							<ul class="h-lang">
+								<li class="h-lang__item active">
+									<a href="#" class="h-lang__link">
+										Ru
+									</a>
+								</li>
+								<li class="h-lang__item">
+									<a href="#" class="h-lang__link">
+										Eng
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="header__h-buy">
+							<a href="#" class="h-buy btn btn-dark btn-glitch">
+								Купить билет
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 	<header class="header header-white">
 		<div class="active-mobmenu__bg"></div>
 		<div class="container-fluid">
@@ -147,14 +237,14 @@
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 							</p>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/rjpiBkckXfY?controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<iframe src="https://www.youtube.com/embed/rjpiBkckXfY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							<h2>
 								Заголовок
 							</h2>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 							</p>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/rjpiBkckXfY?controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<iframe src="https://www.youtube.com/embed/rjpiBkckXfY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
@@ -216,7 +306,7 @@
 			if(currentY == '') currentY = e.pageY;
 			var ydiff = e.pageY - currentY;
 			currentY = e.pageY; 
-			$('.p-media__img').each(function(i, el) {
+			$('.p-media__img img').each(function(i, el) {
 				var movement = (i + 1) * (xdiff * movementConstant);
 				var movementy = (i + 1) * (ydiff * movementConstant);
 				var newX = $(el).position().left + movement;
