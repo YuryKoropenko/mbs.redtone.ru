@@ -1159,11 +1159,126 @@ canvas
 			display: inline-block
 			line-height: 47px
 
+.page__p-map
+	position: relative
+	width: 1140px
+	height: 1164px
+	margin-bottom: 50px
+.page__p-map > img
+	display: block
+	position: absolute
+	left: 0
+	right: 0
+	top: 40px
+	bottom: 0
+	z-index: 9
+	width: 100%
+
 .p-map
 	&__wp
 	&__img
 		display: block
 		width: 1140px
-		height: 1038.45px
-	&__area-1
+		height: 1164px
+	&__popup
+		background-color: #fff
+		width: 340px
+		padding: 15px 7.5px 15px 15px
+		&-wp
+			position: absolute
+			z-index: 20
+			padding-bottom: 8px
+			display: none
+		&::after
+			content: ''
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 8px 5px 0 5px;
+			border-color: #ffffff transparent transparent transparent;
+			display: block
+			position: absolute
+			bottom: 0
+			left: 11px
+	&__scroll
+		height: 282px
+		overflow-y: auto
+		overflow-x: hidden
+		margin-bottom: 15px
+	&__item
+		padding-bottom: 20px
+		width: auto
+		border-bottom: 1px solid #707070
+		padding-top: 20px
+		margin-right: 7.5px
+	&__title
+		font-size: 15px
+		font-family: "MullerBold";
+		display: block
+	&__data
+		font-size: 12px
+		display: block
+		padding: 10px 0 14px
+	&__more
+		width: 114px
+		height: 27px
+		line-height: 25px
+		font-size: 10px
+		border: 2px solid #0d0d0d
+		&:hover
+			background-color: #0d0d0d
+			color: #fff
+	&__button
+		width: 100%
+		background-color: #0d0d0d
+		color: #fff
+		line-height: 37px
+		height: 39px
+		max-width: none;
+		font-size: 10px
+		border: 2px solid #0d0d0d
+		&:hover
+			background-color: transparent
+			border: 2px solid #0d0d0d
+			color: #0d0d0d
 
+
+.map-demobar2
+	left: 522px
+	bottom: 133px
+.map-demobar1
+	left: 382px
+	bottom: 133px
+.map-barmanagement
+	bottom: 183px
+	left: 247px
+.map-lectureroom1
+	left: 382px
+	bottom: 183px
+.map-multimediazone
+	left: 109px
+	bottom: 183px
+.map-lectureroom2
+	left: 630px
+	bottom: 183px
+.map-section1
+	left: 109px
+	bottom: 328px
+.map-section2
+	bottom: 328px
+	left: 239px
+.map-section3
+	bottom: 265px
+	left: 405px
+.map-winezone
+	bottom: 328px
+	left: 428px
+.map-market
+	bottom: 328px
+	left: 559px
+.map-craftbeer
+	bottom: 288px
+	left: 636px
+.map-foodcoart
+	bottom: 644px
+	left: 445px

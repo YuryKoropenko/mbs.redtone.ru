@@ -2,6 +2,15 @@ if (screen.width < 992) {
 	$('*').removeClass('btn-glitch');
 }
 $(function() {
+	/*map*/
+	$('.map-jspopup').hover(function() {
+		$(this).children('.p-map__popup-wp').stop(true, false).fadeIn();
+	}, function() {
+		$(this).children('.p-map__popup-wp').stop(true, false).fadeOut();
+	});
+	$('.map-jspopup area').on('click', function() {
+		return false;
+	});
 	
 	$('.p-filter__item label').on('click', function() {
 		$(this).children('svg').toggleClass('fa-square');
