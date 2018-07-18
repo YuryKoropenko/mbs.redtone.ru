@@ -311,6 +311,13 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
+	.container-map
+		max-width: 100% !important
+		padding-left: 0
+		padding-right: 0
+		.row
+			margin-left: 0
+			margin-right: 0
 	.p-buttons__btn
 		font-size: 15px
 	.page__p-buttons
@@ -514,6 +521,10 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
+	.page__p-map-desc
+		display: none
+	.page__m-map-mob
+		display: block
 	.index-bg__wrapper
 		display: none
 	.page__p-social
@@ -801,6 +812,10 @@
 	.header-index, .header-black, .header-white
 		padding-left: 0
 		padding-right: 0
+	.black-page-map
+		height: 100vh
+		.footer
+			display: none
 
 	/**/
 
@@ -866,6 +881,10 @@
 			display: none
 	.page__p-mobatlant
 		display: none
+	.page__p-map-desc
+		display: block
+	.page__m-map-mob
+		display: none
 	
 	/**/
 
@@ -881,6 +900,5 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-
 	/**/
 

@@ -11,6 +11,11 @@ $(function() {
 	$('.map-jspopup area').on('click', function() {
 		return false;
 	});
+
+	$('.m-map__close').on('click', function() {
+		$('.m-map__popup').fadeOut();
+		return false;
+	});
 	
 	$('.p-filter__item label').on('click', function() {
 		$(this).children('svg').toggleClass('fa-square');

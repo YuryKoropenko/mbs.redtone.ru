@@ -288,7 +288,16 @@ body
 				height: auto
 				position: absolute
 	&__p-map
-		padding-top: 40px
+		&-wp
+			margin-top: 40px
+			overflow-x: auto
+			overflow-y: hidden
+	&__m-map
+		position: fixed
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
 
 
 .footer
@@ -369,3 +378,4 @@ body
 
 .header-fixed.header-black
 	background-image: url(../img/black-page.jpg)
+
