@@ -650,11 +650,7 @@ body {
 }
 
 .page__m-map {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  position: static;
 }
 
 .footer {
@@ -2438,8 +2434,8 @@ canvas {
 }
 
 .map-section3 {
-  bottom: 301px;
-  left: 405px;
+  bottom: 326px;
+  left: 560px;
 }
 
 .map-winezone {
@@ -2463,10 +2459,17 @@ canvas {
 }
 
 .m-map {
-  height: 100%;
+  height: auto;
 }
 
 .imageHolder {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+#demo-tiger {
+  width: 100%;
   height: 100%;
 }
 
@@ -2503,10 +2506,6 @@ canvas {
   opacity: 1;
 }
 
-.imageHolder > div {
-  height: 100% !important;
-}
-
 .page__p-map-wp img {
   height: auto !important;
   width: 100% !important;
@@ -2515,7 +2514,7 @@ canvas {
 
 .page__p-title {
   position: relative;
-  z-index: 20;
+  z-index: 0;
 }
 
 .m-map__popup {
@@ -2524,7 +2523,7 @@ canvas {
   position: fixed;
   width: 290px;
   height: 320px;
-  display: block;
+  display: none;
   top: 50%;
   left: 50%;
   margin-top: -160px;
@@ -2615,6 +2614,19 @@ canvas {
   background-color: transparent;
 }
 
+.m-map {
+  height: 100%;
+}
+
+#responsive_example {
+  display: block;
+}
+
+#demo-tiger__new {
+  width: 100%;
+  height: auto;
+}
+
 .black-page-bg {
   background-image: none;
   margin-left: -2%;
@@ -2632,4 +2644,9 @@ canvas {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.map-poligons polygon:hover, .map-poligons rect:hover, .map-poligons polyline:hover {
+  opacity: 0.3;
+  fill: #FFFFFF;
 }

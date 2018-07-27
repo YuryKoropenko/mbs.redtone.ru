@@ -1,6 +1,7 @@
 if (screen.width < 992) {
 	$('*').removeClass('btn-glitch');
 }
+
 $(function() {
 	/*map*/
 	$('.map-jspopup').hover(function() {
