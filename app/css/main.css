@@ -1116,6 +1116,8 @@ body {
   padding-top: 2%;
   padding-left: 35px;
   padding-right: 35px;
+  position: relative;
+  z-index: 10;
 }
 
 .header-black .header__h-nav {
@@ -2473,7 +2475,7 @@ canvas {
   height: 100%;
 }
 
-.zoomInOn {
+.zoom-in {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -2482,17 +2484,13 @@ canvas {
   background-position: center center;
   background-size: cover;
   visibility: visible !important;
-  top: 50% !important;
-  margin-top: -45px;
+  border: none;
+  display: block;
+  background-color: transparent;
   opacity: 1;
 }
 
-.zoomInOff {
-  display: none !important;
-}
-
-.zoomOutOff,
-.zoomOutOn {
+.zoom-out {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -2501,9 +2499,20 @@ canvas {
   background-position: center center;
   background-size: cover;
   visibility: visible !important;
-  top: 50% !important;
+  display: block;
   margin-top: 5px;
   opacity: 1;
+  border: none;
+  background-color: transparent;
+}
+
+.buttons {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  height: 90px;
 }
 
 .page__p-map-wp img {
@@ -2615,16 +2624,108 @@ canvas {
 }
 
 .m-map {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
   height: 100%;
 }
 
 #responsive_example {
-  display: block;
+  width: 100%;
+}
+
+svg:not(:root) {
+  overflow: visible !important;
 }
 
 #demo-tiger__new {
   width: 100%;
   height: auto;
+}
+
+.arrows {
+  position: fixed;
+  width: 120px;
+  height: 120px;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.zoom-left {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  text-indent: -9999px;
+  background-image: url(../img/left.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.zoom-right {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  text-indent: -9999px;
+  background-image: url(../img/right.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.zoom-top {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  text-indent: -9999px;
+  background-image: url(../img/top.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -20px;
+}
+
+.zoom-bottom {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  text-indent: -9999px;
+  background-image: url(../img/bottom.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -20px;
 }
 
 .black-page-bg {
