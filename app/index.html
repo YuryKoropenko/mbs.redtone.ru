@@ -31,7 +31,7 @@
 		</filter>
 	</defs>
 </svg>
-<body>
+<body class="p-disksman__hidden">
 	<header class="header header-index">
 		<div class="active-mobmenu__bg"></div>
 		<div class="container-fluid">
@@ -193,6 +193,34 @@
 			</form>
 		</div>
 	</div>
+	<div class="p-disksman__bg"></div>
+	<div class="p-disksman">
+		<div class="p-disksman__title">
+			Вам исполнилось<br>18 лет?
+		</div>
+		<div class="p-disksman__row">
+			<a href="#" class="p-disksman__button btn-glitch p-disksman__button-yes">
+				Да
+			</a>
+			<a href="#" class="p-disksman__button btn-glitch p-disksman__button-no">
+				Нет
+			</a>
+		</div>
+		<div class="p-disksman__lang">
+			<ul class="h-lang">
+				<li class="h-lang__item">
+					<a href="#" class="h-lang__link">
+						Ru
+					</a>
+				</li>
+				<li class="h-lang__item">
+					<a href="#" class="h-lang__link">
+						Eng
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 
 	<!-- Scripts -->
 	<script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
@@ -200,9 +228,9 @@
 	<script type="text/javascript" src="js/TweenMax.min.js"></script>
 	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="libs/jquery.backgroundMove.js"></script>
-	<script type="text/javascript" src="js/btn.js"></script>
 	<script type="text/javascript" src="libs/glitcheffect/src/mgGlitch.min.js"></script>
 	<script type="text/javascript" src="libs/fontawesome/svg-with-js/js/fontawesome-all.min.js"></script>
+	<script type="text/javascript" src="js/btn.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script>
 		$('.fb-popup').fancybox();
@@ -260,6 +288,22 @@
 		setInterval(function() {
 			return rainbow();
 		}, 6000);
+	</script>
+
+	<!--Дисклеймер скрипт-->
+	<script>
+		$(document).ready(function() {
+			$('.p-disksman__button-yes').on('click', function() {
+				$('.p-disksman').hide();
+				$('.p-disksman__bg').fadeOut();
+				$('body').removeClass('p-disksman__hidden');
+				return false;
+			});
+			$('.p-disksman__button-no').on('click', function() {
+				history.back();
+				return false;
+			});
+		});
 	</script>
 	<!-- End_Scripts -->
 </body>
