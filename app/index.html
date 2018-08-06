@@ -231,29 +231,9 @@
 	<script type="text/javascript" src="libs/glitcheffect/src/mgGlitch.min.js"></script>
 	<script type="text/javascript" src="libs/fontawesome/svg-with-js/js/fontawesome-all.min.js"></script>
 	<script type="text/javascript" src="js/btn.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+
 	<script>
 		$('.fb-popup').fancybox();
-
-		var currentX = '';
-		var currentY = '';
-		var movementConstant = .015;
-		$(document).mousemove(function(e) {
-			if(currentX == '') currentX = e.pageX;
-			var xdiff = e.pageX - currentX;
-			currentX = e.pageX;
-			if(currentY == '') currentY = e.pageY;
-			var ydiff = e.pageY - currentY;
-			currentY = e.pageY; 
-			$('.index-bg__img-bg').each(function(i, el) {
-				var movement = (i + 1) * (xdiff * movementConstant);
-				var movementy = (i + 1) * (ydiff * movementConstant);
-				var newX = $(el).position().left + movement;
-				var newY = $(el).position().top + movementy;
-				$(el).css('left', newX + 'px');
-				$(el).css('top', newY + 'px');
-			});
-		});
 	</script>
 	<style>
 		.index-bg__wrapper-off {
@@ -261,50 +241,75 @@
 		}
 	</style>
 	<script>
-		$('.index-bg__move').backgroundMove({
-			movementStrength: '20'
-		});
+		if ($(window).width() > 1025) {
+			var currentX = '';
+			var currentY = '';
+			var movementConstant = .015;
+			$(document).mousemove(function(e) {
+				if(currentX == '') currentX = e.pageX;
+				var xdiff = e.pageX - currentX;
+				currentX = e.pageX;
+				if(currentY == '') currentY = e.pageY;
+				var ydiff = e.pageY - currentY;
+				currentY = e.pageY; 
+				$('.index-bg__img-bg').each(function(i, el) {
+					var movement = (i + 1) * (xdiff * movementConstant);
+					var movementy = (i + 1) * (ydiff * movementConstant);
+					var newX = $(el).position().left + movement;
+					var newY = $(el).position().top + movementy;
+					$(el).css('left', newX + 'px');
+					$(el).css('top', newY + 'px');
+				});
+			});
+
+			$('.index-bg__move').backgroundMove({
+				movementStrength: '20'
+			});
+		}
 
 		$('.index-bg__wrapper-on .index-bg__glitch').mgGlitch({
-			destroy : false, // set 'true' to stop the plugin
-			glitch: true, // set 'false' to stop glitching
-			scale: true, // set 'false' to stop scaling
-			blend : true, // set 'false' to stop glitch blending
-			blendModeType : 'hue', // select blend mode type
-			glitch1TimeMin : 600, // set min time for glitch 1 elem
-			glitch1TimeMax : 900, // set max time for glitch 1 elem
-			glitch2TimeMin : 10, // set min time for glitch 2 elem
-			glitch2TimeMax : 115, // скорость анимации
+			destroy : false,
+			glitch: true,
+			scale: true,
+			blend : true, 
+			blendModeType : 'hue',
+			glitch1TimeMin : 600,
+			glitch1TimeMax : 900,
+			glitch2TimeMin : 10,
+			glitch2TimeMax : 115
 		});
 
-		function rainbow() {
-			$('.index-bg__wrapper-off').show();
-			$('.index-bg__wrapper-on').hide();
-			setTimeout (function() {
-				$('.index-bg__wrapper-on').show();
-				$('.index-bg__wrapper-off').hide();
-			}, 3000);
-		}
-		setInterval(function() {
-			return rainbow();
-		}, 6000);
-	</script>
+	function rainbow() {
+		$('.index-bg__wrapper-off').show();
+		$('.index-bg__wrapper-on').hide();
+		setTimeout (function() {
+			$('.index-bg__wrapper-on').show();
+			$('.index-bg__wrapper-off').hide();
+		}, 3000);
+	}
+	setInterval(function() {
+		return rainbow();
+	}, 6000);
+</script>
 
-	<!--Дисклеймер скрипт-->
-	<script>
-		$(document).ready(function() {
-			$('.p-disksman__button-yes').on('click', function() {
-				$('.p-disksman').hide();
-				$('.p-disksman__bg').fadeOut();
-				$('body').removeClass('p-disksman__hidden');
-				return false;
-			});
-			$('.p-disksman__button-no').on('click', function() {
-				history.back();
-				return false;
-			});
+<!--Дисклеймер скрипт-->
+<script>
+	$(document).ready(function() {
+		$('.p-disksman__button-yes').on('click', function() {
+			$('.p-disksman').hide();
+			$('.p-disksman__bg').fadeOut();
+			$('body').removeClass('p-disksman__hidden');
+			return false;
 		});
-	</script>
+		$('.p-disksman__button-no').on('click', function() {
+			history.back();
+			return false;
+		});
+	});
+</script>
+
+	<script type="text/javascript" src="js/main.js"></script>
+	
 	<!-- End_Scripts -->
 </body>
 </html>

@@ -712,7 +712,7 @@ body {
 }
 
 .p-pcard__right .p-progitem__row {
-  padding-bottom: 16px;
+  padding-bottom: 0;
 }
 
 .row-pcard {
@@ -2834,4 +2834,37 @@ svg:not(:root) {
 .map-poligons polygon:hover, .map-poligons rect:hover, .map-poligons polyline:hover {
   opacity: 0.3;
   fill: #FFFFFF;
+}
+
+.index-bg__zagl-wp {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.index-bg__zagl {
+  display: inline-block;
+}
+
+.index-bg__zagl span {
+  background-color: #fff;
+  color: #000;
+  font-size: 36px;
+  line-height: 100%;
+  display: inline-block;
+  font-family: "MullerBold";
+  text-transform: uppercase;
+  padding: 9px 24px 0;
 }

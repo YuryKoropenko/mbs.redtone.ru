@@ -727,10 +727,10 @@
 			<div class="page__m-map page__m-map-mob">
 				<div class="m-map">
 					<div class="arrows">
-						<button class="zoom-left" onclick="pan(25, 0)">left</button>
-						<button class="zoom-right" onclick="pan(-25, 0)">right</button>
-						<button class="zoom-top" onclick="pan(0, 25)">top</button>
-						<button class="zoom-bottom" onclick="pan(0,-25)">bottom</button>
+						<button class="zoom-left" onclick="pan(50, 0)">left</button>
+						<button class="zoom-right" onclick="pan(-50, 0)">right</button>
+						<button class="zoom-top" onclick="pan(0, 50)">top</button>
+						<button class="zoom-bottom" onclick="pan(0,-50)">bottom</button>
 					</div>
 					<div class="buttons">
 						<button class="zoom-in" onclick="zoom(1.25)"></button>
@@ -12791,6 +12791,7 @@ QkI+aFVhD92KRqqQJR80YuPpF5RGnPUd6LRAOtaVQiUb1EInt80Lzit/BzrIR6/jz3j5RteW/nb8
 		var newMatrix = "matrix(" +  transformMatrix.join(' ') + ")";
 		matrixGroup.setAttributeNS(null, "transform", newMatrix);
 	}
+
 
 </script>
 <script>
