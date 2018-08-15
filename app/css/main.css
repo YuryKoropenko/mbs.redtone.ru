@@ -2523,7 +2523,7 @@ canvas {
 
 .page__p-title {
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 
 .m-map__popup {
@@ -2810,6 +2810,17 @@ svg:not(:root) {
 
 .p-disksman__hidden {
   overflow: hidden !important;
+}
+
+.mob-patern {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 55;
+  background-color: transparent;
+  display: none;
 }
 
 .black-page-bg {
